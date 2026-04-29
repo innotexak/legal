@@ -5,7 +5,6 @@ const helpers = (() => {
 	let isScrollDisabled = false;
 	const disabledScrollClass = 'scroll-disabled';
 
-	// Disable window scroll when popups, navigation and similar are opened
 	const disableScroll = () => {
 		if (!isScrollDisabled) {
 			topScroll = document.documentElement.scrollTop;
@@ -15,31 +14,12 @@ const helpers = (() => {
 		}
 	};
 
-	// Enable back window scroll when closing the opened overlays
 	const enableScroll = () => {
 		body.removeAttribute('style');
 		body.classList.remove(disabledScrollClass);
 		document.documentElement.scrollTop = topScroll;
 		isScrollDisabled = false;
 	};
-
-	// Equal heights function should be best used on window load, and with debounce function on window resize
-	/**     window.addEventListener('load', () => {
-	 *          this.setEqualHeights(document.querySelectorAll('.js-equal-item'), 2);
-	 *      });
-	 *
-	 *      # This will wait for a tenth of a second, when the window has finished resizing, and then the function will be called
-	 *      window.addEventListener('resize', this.debounce(() => {
-	 *          this.setEqualHeights(document.querySelectorAll('.js-equal-item'), 2);
-	 *      }, 100));
-	 *
-	 *      # This function will be executed 4 times in a second during the event (without throttle, the function is called more than 100 times)
-	 *      window.addEventListener('resize', this.throttle(() => {
-	 *          this.setEqualHeights(document.querySelectorAll('.js-equal-item'), 2);
-	 *      }, 250));
-	 *
-	 *      # Recommended events to be throttled or debounced are window scroll, resize, mousemove
-	 */
 
 	const setEqualHeights = (arrayItems, count) => {
 		const convertedElements = [...arrayItems];

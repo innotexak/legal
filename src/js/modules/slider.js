@@ -26,12 +26,10 @@ const slider = (Splide => {
 					pagination: 'splide__pagination'
 				},
 				breakpoints: {
-					// when window width is =< 1199
 					1199: {
 						gap: 30,
 						perPage: 2
 					},
-					// when window width is =< 767
 					767: {
 						gap: 20,
 						perPage: 1

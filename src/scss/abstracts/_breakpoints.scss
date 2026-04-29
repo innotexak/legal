@@ -9,7 +9,6 @@ $grid-breakpoints: (
 	xl: 1200px
 ) !default;
 
-// Name of the next breakpoint, or null for the last breakpoint.
 @function breakpoint-next(
 	$name,
 	$breakpoints: $grid-breakpoints,
@@ -24,7 +23,6 @@ $grid-breakpoints: (
 	@return null;
 }
 
-// Minimum breakpoint width. Null for the smallest breakpoint.
 @function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
 	$min: map.get($breakpoints, $name);
 
@@ -35,7 +33,6 @@ $grid-breakpoints: (
 	@return null;
 }
 
-// Maximum breakpoint width. Null for the largest breakpoint.
 @function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
 	$next: breakpoint-next($name, $breakpoints);
 
@@ -46,7 +43,6 @@ $grid-breakpoints: (
 	@return null;
 }
 
-// Media of at least the minimum breakpoint width.
 @mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
 	$min: breakpoint-min($name, $breakpoints);
 
@@ -59,7 +55,6 @@ $grid-breakpoints: (
 	}
 }
 
-// Media of at most the maximum breakpoint width.
 @mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
 	$max: breakpoint-max($name, $breakpoints);
 
@@ -72,7 +67,6 @@ $grid-breakpoints: (
 	}
 }
 
-// Media that spans multiple breakpoint widths.
 @mixin media-breakpoint-between($lower, $upper, $breakpoints: $grid-breakpoints) {
 	$min: breakpoint-min($lower, $breakpoints);
 	$max: breakpoint-max($upper, $breakpoints);
@@ -92,7 +86,6 @@ $grid-breakpoints: (
 	}
 }
 
-// Media between the breakpoint's minimum and maximum widths.
 @mixin media-breakpoint-only($name, $breakpoints: $grid-breakpoints) {
 	$min: breakpoint-min($name, $breakpoints);
 	$max: breakpoint-max($name, $breakpoints);

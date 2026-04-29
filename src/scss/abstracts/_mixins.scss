@@ -3,16 +3,13 @@
 @use 'sass:math';
 @use "sass:string";
 
-// ----------  Text Overflow
-// ------------------------------------------------------------------------------
+
 @mixin text-truncate {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
 
-// ----------  Vertical / horizontal alignment
-// ------------------------------------------------------------------------------
 @mixin align($position: relative, $direction: x) {
 	position: $position;
 	@if ($direction == 'y') {
@@ -28,10 +25,6 @@
 	}
 }
 
-// example: @include align(absolute, xy); for centering both axis'
-// default @include align(); will be relative on x axis
-
-//	Visually hidden mixin for accessibility
 @mixin visually-hidden() {
 	border: 0;
 	clip: rect(0 0 0 0);
@@ -43,8 +36,6 @@
 	width: 1px;
 }
 
-// Hover mixin only for desktop devices
-// to include use @include hover {your hover styles} can also include elements
 @mixin hover {
 	@media (hover: hover) and (pointer: fine) {
 		.no-touch &:hover {
@@ -53,8 +44,7 @@
 	}
 }
 
-// Focus mixin - focus state visible only when tabbing is active
-// to include use @include focus {your focus styles} can also include elements
+
 @mixin focus {
 	@media only screen and (min-width: 1200px) {
 		.active-focus &:focus {
@@ -63,11 +53,7 @@
 	}
 }
 
-// ----------  Fonts import
-// ------------------------------------------------------------------------------
 
-// usage: @include webFont(Helvetica, HelveticaNeueLTStd-Th, 100);
-// in mixin call add three parameters (font name, font file name, font-weight, [font-style])
 $path: '../assets/fonts' !default;
 
 @mixin webFont($name, $file, $weight, $style: 'normal') {
@@ -84,20 +70,12 @@ $path: '../assets/fonts' !default;
 	}
 }
 
-// ----------  Animation mixin
-// ------------------------------------------------------------------------------
-
-// @include animation {transition: color 3s ease;}
 @mixin animation {
 	.loaded & {
 		@content;
 	}
 }
 
-// ----------  Iconfont mixin
-// ------------------------------------------------------------------------------
-// usage @include icon(tv, after) {your css properties}
-// in a mixin call add only icon name WITHOUT ico prefix and add before/after for pseudo element
 
 @mixin icon($name: download, $pseudo: before) {
 	&::#{$pseudo} {
@@ -107,30 +85,6 @@ $path: '../assets/fonts' !default;
 	}
 }
 
-
-// usage:
-// single: font-size: fluid(20px, 30px);
-// multiple: padding: fluid(40px, 60px) fluid(20px, 30px);
-
-// the first value represents the minimum value, the size from the tablet design
-// the second one is a value from desktop design
-
-// exaple of using fluid funcion
-
-// .rte h1,
-// .h1 {
-// 	margin-bottom: 30px;
-// 	@include media-breakpoint-up(xl) {
-// 		font-size: fluid(52px, 72px);
-// 		margin-bottom: fluid(30px, 40px);
-// 	}
-// 	@include media-breakpoint-between(md, lg) {
-// 		font-size: 52px;
-// 	}
-// 	@include media-breakpoint-down(sm) {
-// 		font-size: 36px;
-// 	}
-// }
 
 $window-width: 1920px;
 
@@ -162,22 +116,6 @@ $window-width: 1920px;
 	@return remove-whitespace($fluid);
 }
 
-// usage:
-// @include fluid-grid(font-size, 32px, 44px, 56px);
-
-// all four parametars are mandatory
-// the first value represents the css property (single css usage only)
-// the second one is a value from mobile design
-// the third one is a value from tablet design
-// the fourth one is a value from desktop design
-
-// exaple of using fluid-grid mixin
-
-// .rte h1,
-// .h1 {
-// 	@include fluid-grid(font-size, 32px, 44px, 56px);
-// }
-
 @mixin fluid-grid($property, $mobile, $tablet, $desktop) {
 	& {
 		#{$property}: #{$mobile};
@@ -192,11 +130,7 @@ $window-width: 1920px;
 	}
 }
 
-// ----------  px to viewport mixin
-// ------------------------------------------------------------------------------
 
-// usage - single: width: vp(250px) or multiple args: padding: vp(20px 10px 30px)
-// with built-in method calc(#{vp(250px)} + 50%);
 
 $unitValue: 'vw';
 $lg: 1920px;

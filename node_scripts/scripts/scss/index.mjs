@@ -12,10 +12,6 @@ import paths from '../../helpers/paths.mjs';
 import globalVars from '../../helpers/globalVars.mjs';
 import initSetup from '../../helpers/initSetup.mjs';
 
-// /*----------------------------------------------------------------------------------------------
-// SCSS
-//  ----------------------------------------------------------------------------------------------*/
-
 const scss = ((sass, path, fs, autoprefixer, flexBugsFix, mergeMedia, postcss, stylelint, colors, logger, paths, globalVars, initSetup) => {
 
 	const compileFile = async(file, outputFolder) => {
