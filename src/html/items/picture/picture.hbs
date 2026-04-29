@@ -1,0 +1,10 @@
+<picture class="picture">
+	{{#if mobileImage}}
+	<source media="(max-width:767px)" srcset="{{mobileImage.url}}">
+	{{/if}}
+	{{#if tabletImage}}
+	<source media="(max-width:1199px)" srcset="{{tabletImage.url}}">
+	{{/if}}
+	<img class="picture__img image" src="{{image.url}}"
+		alt="{{#if image.alternateText}}{{image.alternateText}}{{else}}Decorative image.{{/if}}">
+</picture>

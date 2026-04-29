@@ -1,0 +1,15 @@
+{
+	"template": "index",
+	"data": {
+		">>": "shared/master/data.json",
+		"header": {
+			">>": "shared/header/data.json"
+		},
+		"footer": {
+			">>": "shared/footer/data.json"
+		},
+		
+		"sections": []
+	}
+}
+

@@ -1,0 +1,28 @@
+{
+    "cookieCivic": false,
+    "pageTitle": "Front-end HBS Starter",
+    "seo": {
+        "seoTitle": "Seo Title",
+        "seoDescription": "",
+        "seoKeywords": "",
+        "canonicalLink": "http://umbraco9-test.local/",
+        "alternateLanguageLinks": [],
+        "hideFromSearchEngines": false
+    },
+    "openGraph": {
+        "title": "Home",
+        "description": "Home page open graph description",
+        "image": {
+            "url": "http://umbraco9-test.local/media/kklffmoc/img3.jpg",
+            "alternateText": "",
+            "type": "jpg",
+            "width": 1120,
+            "height": 700
+        },
+        "canonicalUrl": "http://umbraco9-test.local/",
+        "locale": "en-US",
+        "siteName": "Site name"
+    },      
+	"googleTagManagerSript": false,
+	"googleTagManagerNoSript": false
+}

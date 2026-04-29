@@ -1,0 +1,39 @@
+<footer class="footer">
+	<div class="wrap">
+		{{#if footer}}
+		<div class="footer__container">
+			
+			<ul class="footer__menu">
+				<div class="footer__legal">
+					<span class="footer__copy">
+						{{footer.copy}}
+					</span>
+				</div>
+				{{#if footer.menus}}
+				{{#each footer.menus}}
+					<li class="footer__menu-list">
+						
+						<a class="footer__menu-link" href="{{this.src}}">{{this.label}}</a>
+						|
+					</li>
+					
+				{{/each}}
+				{{/if}}
+			</ul>
+
+			<div class="footer__company">	
+				{{#if footer.company}}
+					<span class="footer__company-text">{{footer.company}}</span>
+				{{/if}}
+
+				{{#if footer.socials}}
+				{{#each footer.socials}}
+					<img src="{{this.src}}" alt="{{this.alternativeText}}" class="footer__social-image"/>
+				{{/each}}
+				{{/if}}
+
+			</div>
+		</div>
+		{{/if}}
+	</div>
+</footer>

@@ -1,0 +1,56 @@
+<header class="header" data-script="header">
+	<div class="wrap">
+		<div class="header__container">
+			<div class="header__top js-header__top">
+				{{#if logo}}
+				<a href="/" class="header__home">
+					<img 
+					class="header__logo js-header__logo" 
+					src="{{logo.src}}" 
+					alt="{{logo.alternateText}}"
+					data-logo-light="{{logo.src}}"
+					data-logo-dark="{{logo.light.src}}">
+				</a>	
+				{{/if}}
+				
+				<span class="header__title">{{title}}</span>
+				
+				{{#if hamburger}}
+				<span class="header__hamburger js-hamburger-toggle"
+					data-icon-light="{{hamburger.src}}"
+					data-icon-dark="{{hamburger.light.src}}"
+					data-icon-open="{{hamburger.open.src}}">
+					<img class="js-hamburger-icon" src="{{hamburger.light.src}}" alt="{{hamburger.alternateText}}">
+				</span>
+				{{/if}}
+			</div>
+
+			<div class="header__left">
+				{{#if report}}
+				<div class="header__content">
+					<p class="header__content-subtitle">{{report.subtitle}}</p>
+					<span class="header__content-stroke"></span>
+					<h1 class="header__content-maintitle">{{{formatText report.maintitle}}}</h1>
+					<p class="header__content-text">{{report.content}}</p>
+				</div>
+				{{/if}}
+			</div>
+		</div>
+	</div>
+
+	{{#if menu}}
+	<nav class="header__nav-close js-header__nav-close">
+		<div class="wrap">
+			<ul class="header__nav-list" role="menubar">
+				{{#each menu}}
+				<li class="header__nav-item" role="menuitem">
+					<a class="header__nav-link" href="{{this.url}}"{{#ifContains this.target "_blank"}} target="_blank" rel="noopener noreferrer"{{/ifContains}}>{{this.text}}</a>
+				</li>
+				{{/each}}
+			</ul>
+		</div>	
+	</nav>
+	{{/if}}
+
+	<div class="header__ball"></div>
+</header>

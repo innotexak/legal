@@ -1,0 +1,80 @@
+{
+	"defaultSeverity": "warning",
+	"extends": "stylelint-config-standard-scss",
+	"rules": {
+		"selector-attribute-quotes": "always",
+		"block-no-empty": true,
+		"color-no-invalid-hex": [
+			true,
+			{
+				"severity": "error"
+			}
+		],
+		"color-hex-length": "short",
+		"color-named": "never",
+		"selector-max-id": 0,
+		"unit-no-unknown": [
+			true,
+			{
+				"severity": "error"
+			}
+		],
+		"comment-empty-line-before": [
+			"always",
+			{
+				"ignore": [
+					"stylelint-commands",
+					"after-comment"
+				]
+			}
+		],
+		"length-zero-no-unit": true,
+		"shorthand-property-no-redundant-values": true,
+		"property-no-vendor-prefix": [
+			true,
+			{
+				"severity": "error"
+			}
+		],
+		"selector-no-vendor-prefix": [
+			true,
+			{
+				"severity": "error"
+			}
+		],
+		"declaration-property-value-disallowed-list": {
+			"transition": [
+				"/all/"
+			]
+		},
+		"declaration-block-no-duplicate-properties": true,
+		"max-nesting-depth": 3,
+		"declaration-block-no-shorthand-property-overrides": true,
+		"declaration-block-no-redundant-longhand-properties": [
+			true,
+			{
+				"ignoreShorthands": ["inset"]
+			}
+		],
+		"declaration-empty-line-before": "never",
+		"no-invalid-double-slash-comments": null,
+		"selector-class-pattern": null,
+		"scss/comment-no-empty": null,
+		"scss/no-global-function-names": null,
+		"scss/double-slash-comment-empty-line-before": null,
+		"rule-empty-line-before": null,
+		"at-rule-empty-line-before": null,
+		"color-function-notation": "legacy",
+		"no-descending-specificity": null,
+		"alpha-value-notation": "number",
+		"media-feature-range-notation": null
+	},
+	"ignoreFiles": [
+		"src/scss/base/_print.scss",
+		"src/scss/abstracts/_mixins.scss",
+		"src/scss/base/_icon-font.scss",
+		"src/scss/base/_reset.scss",
+		"src/scss/typography/_fonts.scss",
+		"src/scss/plugins/*.scss"
+	]
+}

@@ -1,0 +1,57 @@
+// ----------  button
+// ------------------------------------------------------------------------------
+@use "../abstracts" as *;
+
+button,
+input[type='button'],
+input[type='submit'] {
+	background: none;
+	border: 0;
+	cursor: pointer;
+	outline: none;
+	padding: 0;
+}
+
+a,
+button {
+	appearance: none;
+	outline: none;
+
+	@include focus {
+		outline: 1px dashed $orange
+	}
+}
+
+.btn {
+	background-color: $black;
+	color: $white;
+	display: inline-block;
+	font-size: 0;
+	font-weight: bold;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 20px;
+	transition: 0.4s ease-out;
+	@include hover {
+		opacity: 0.3;
+		border-radius: 20px;
+	}
+}
+.skip-link {
+	position: absolute;
+	left: 0;
+	top: 0;
+	transform: translateY(-100%);
+	z-index: 21;
+	color: $black;
+	font-size: 16px;
+	line-height: 20px;
+	padding: 8px 14px;
+	background-color: $white;
+	opacity: 0;
+	@include focus {
+		opacity: 1;
+		outline: 2px solid $orange;
+		transform: translateY(0);
+	}
+}

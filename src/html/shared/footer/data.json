@@ -1,0 +1,50 @@
+{
+	"footer":{
+		"copy":"© “Legal”",
+		"menus":[
+			{
+				"link":"sitemap",
+				"label":"Sitemap",
+				"target":"_self" 
+			},
+			{
+				"link":"policies",
+				"label":"Policies",
+				"target":"_self" 
+ 
+			},
+			{
+				"link":"hr-login",
+				"label":"HR Client Log In",
+				"target":"_self" 
+
+			},
+				{
+				"link":"preferences",
+				"label":"Preferences ",
+				"target":"_self" 
+ 
+			},
+				{
+				"link":"price-trans",
+				"label":"Price Transparency",
+				"target":"_self" 
+ 
+			},
+			{
+				"link":"slavery-statement",
+				"label":"Modern Slavery Statement",
+				"target":"_self" 
+ 
+			}
+		],
+		"company":"By Vega IT",
+		"socials":[
+			{
+				"src":"assets/images/linkedin.png",
+				"alternativeText":"linkedin"
+			}
+		]
+	}
+}
+

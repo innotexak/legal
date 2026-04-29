@@ -1,0 +1,21 @@
+// ----------  variables
+// ------------------------------------------------------------------------------
+
+
+$font-default: poppins, arial, sans-serif;
+
+// Colors
+$white: #fff;
+$black: #000;
+$orange: #f1592a;
+$grey: #5b6770;
+$dark-grey: #4D4F53;
+$gold: #B3A87C;
+$dark-gold: #AC672E;
+$site-colors: (
+	'black': $black,
+	'white': $white,
+	'orange': $orange,
+	'gold': $gold
+) !default;
+$box-shadow-color: rgb(0, 0, 0, 0.05);

@@ -1,0 +1,14 @@
+{
+	"image": {
+		"url": "assets/images/demo.jpg",
+		"alternateText": "Image desktop"
+	},
+	"tabletImage": {
+		"url": "assets/images/tablet.jpg",
+		"alternateText": "Image tablet"
+	},
+	"mobileImage": {
+		"url": "assets/images/mobile.jpg",
+		"alternateText": "Image mobile"
+	}
+}

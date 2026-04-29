@@ -1,0 +1,18 @@
+# ignore everything in the "dist" directory:
+dist
+
+# ignore node_modules files
+node_modules
+
+# ignore log files
+*.log
+
+# ignore macos files
+.DS_Store
+
+# ignore Editor files
+.idea
+
+# ignore icon font generated file
+/src/scss/base/_icon-font.scss
+

@@ -1,0 +1,18 @@
+// ----------  banner
+// ------------------------------------------------------------------------------
+
+@use "../abstracts" as *;
+
+.banner__content {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 20px;
+	background-color: rgba($white, 0.5);
+}
+.banner__title {
+	font-size: 24px;
+}
+.banner__holder {
+	position: relative;
+}

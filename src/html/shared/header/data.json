@@ -1,0 +1,84 @@
+{
+	"logo": {
+		"src": "assets/images/logo.png",
+		"alternateText": "Logo image.",
+		"light":{
+			"src":"assets/images/logo-light.png",
+			"alternativeText":"Light logo"
+		}
+	},
+
+	"title":"Annual Report & Acounts",
+	"menu": [
+		{
+			"text": "Introduction",
+			"url": "#introduction",
+			"target": "_self"
+		},
+		{
+			"text": "Vission, Mission and Purpose",
+			"url": "#vission",
+			"target": "_self"
+		},
+		{
+			"text": "Financial Highlights",
+			"url": "#fin",
+			"target": "_self"
+		},
+		{
+			"text": "At a Glance",
+			"url": "#glance",
+			"target": "_self"
+		},
+		{
+			"text": "Chairman / CEO / Statements",
+			"url": "#chairman",
+			"target": "_self"
+		},
+		{
+			"text": "Investment Case",
+			"url": "#investment",
+			"target": "_self"
+		},
+		{
+			"text": "Business Model",
+			"url": "#business",
+			"target": "_self"
+		},
+		{
+			"text": "Competitive Advantage",
+			"url": "#competitive",
+			"target": "_self"
+		},
+		{
+			"text": "Culture / Clients / People",
+			"url": "#culture",
+			"target": "_self"
+		},
+		{
+			"text": "Download",
+			"url": "#download",
+			"target": "_self"
+		}
+	],
+
+	"hamburger":{
+		"src":"assets/images/hamburger.png",
+		"alternateText":"hamburger",
+		"open":{
+			"src":"assets/images/close.png",
+			"alternativeText":"close"
+		},
+		"light":{
+			"src":"assets/images/hamburger-light.png",
+			"alternativeText":"hamburger logo"
+	}
+},
+
+	"report":{
+		"subtitle":"Annual Report & Accounts 2021/2022",
+		"maintitle":"Empowering a \n thriving future",
+		"content":"We are a legal and professional services business empowering our people to deliver outstanding advice that enables our clients to achieve their goals, allowing us all to thrive."
+	}
+
+}

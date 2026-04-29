@@ -1,0 +1,2 @@
+cd Starter
+npx lint-staged

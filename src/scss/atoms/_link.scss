@@ -1,0 +1,11 @@
+// ---------- @{module}
+// ------------------------------------------------------------------------------
+@use "../abstracts" as *;
+
+.link {
+	color: $black;
+	text-decoration: underline;
+	@include hover {
+		color: $orange;
+	}
+}

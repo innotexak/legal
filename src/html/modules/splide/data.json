@@ -1,0 +1,35 @@
+{
+	"cards": [
+		{
+			">>": "items/card/data.json"
+		},
+		{
+			">>": "items/card/data.json",
+			"cardTitle": "Card Title 2",
+			"image": {
+				"url": "https://dummyimage.com/600x400/000/fff",
+				"alternateText": "Card image."
+			}
+		},
+		{
+			">>": "items/card/data.json",
+			"cardTitle": "Card Title 3",
+			"image": {
+				"url": "https://dummyimage.com/600x400/000/5600ff",
+				"alternateText": "Card image."
+			}
+		},
+		{
+			">>": "items/card/data.json",
+			"cardTitle": "Card Title 4"
+		},
+		{
+			">>": "items/card/data.json",
+			"cardTitle": "Card Title 5",
+			"image": {
+				"url": "https://dummyimage.com/600x400/000/f20",
+				"alternateText": "Card image."
+			}
+		}
+	]
+}

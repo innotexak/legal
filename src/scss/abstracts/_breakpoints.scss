@@ -1,0 +1,113 @@
+@use "sass:map";
+@use "sass:list";
+
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px
+) !default;
+
+// Name of the next breakpoint, or null for the last breakpoint.
+@function breakpoint-next(
+	$name,
+	$breakpoints: $grid-breakpoints,
+	$breakpoint-names: map.keys($breakpoints)
+) {
+	$n: list.index($breakpoint-names, $name);
+
+	@if $n < list.length($breakpoint-names) {
+		@return list.nth($breakpoint-names, $n + 1);
+	}
+
+	@return null;
+}
+
+// Minimum breakpoint width. Null for the smallest breakpoint.
+@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+	$min: map.get($breakpoints, $name);
+
+	@if $min != 0 {
+		@return $min;
+	}
+
+	@return null;
+}
+
+// Maximum breakpoint width. Null for the largest breakpoint.
+@function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
+	$next: breakpoint-next($name, $breakpoints);
+
+	@if $next {
+		@return breakpoint-min($next, $breakpoints) - 0.02px;
+	}
+
+	@return null;
+}
+
+// Media of at least the minimum breakpoint width.
+@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+	$min: breakpoint-min($name, $breakpoints);
+
+	@if $min {
+		@media only screen and (min-width: $min) {
+			@content;
+		}
+	} @else {
+		@content;
+	}
+}
+
+// Media of at most the maximum breakpoint width.
+@mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
+	$max: breakpoint-max($name, $breakpoints);
+
+	@if $max {
+		@media only screen and (max-width: $max) {
+			@content;
+		}
+	} @else {
+		@content;
+	}
+}
+
+// Media that spans multiple breakpoint widths.
+@mixin media-breakpoint-between($lower, $upper, $breakpoints: $grid-breakpoints) {
+	$min: breakpoint-min($lower, $breakpoints);
+	$max: breakpoint-max($upper, $breakpoints);
+
+	@if $min != null and $max != null {
+		@media only screen and (min-width: $min) and (max-width: $max) {
+			@content;
+		}
+	} @else if $max == null {
+		@include media-breakpoint-up($lower, $breakpoints) {
+			@content;
+		}
+	} @else if $min == null {
+		@include media-breakpoint-down($upper, $breakpoints) {
+			@content;
+		}
+	}
+}
+
+// Media between the breakpoint's minimum and maximum widths.
+@mixin media-breakpoint-only($name, $breakpoints: $grid-breakpoints) {
+	$min: breakpoint-min($name, $breakpoints);
+	$max: breakpoint-max($name, $breakpoints);
+
+	@if $min != null and $max != null {
+		@media only screen and (min-width: $min) and (max-width: $max) {
+			@content;
+		}
+	} @else if $max == null {
+		@include media-breakpoint-up($name, $breakpoints) {
+			@content;
+		}
+	} @else if $min == null {
+		@include media-breakpoint-down($name, $breakpoints) {
+			@content;
+		}
+	}
+}

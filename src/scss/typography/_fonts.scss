@@ -1,0 +1,12 @@
+// ----------  fonts
+// ------------------------------------------------------------------------------
+@use "../abstracts" as *;
+
+// usage: @include webFont(Helvetica, HelveticaNeueLTStd-Th, 300);
+// in mixin call add three parameters (font name, font file name, font-weight, [font-style])
+// font-style is optional
+
+
+@include webFont(Poppins, "Poppins-Bold", 700);
+@include webFont(Poppins, "Poppins-Medium", 500);
+@include webFont(Poppins, "Poppins-Light", 300);

@@ -1,0 +1,14 @@
+{
+	"title": "Banner Title",
+	"subtitle": "Banner Subtitle",
+	"image": {
+		"url": "assets/images/demo.jpg",
+		"alternateText": "Image desktop",
+		"width": 1700,
+		"height": 650
+	},
+	"mobileImage": {
+		"url": "assets/images/mobile.jpg",
+		"alternateText": "Image mobile"
+	}
+}

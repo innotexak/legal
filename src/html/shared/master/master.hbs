@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="{{data.language}}">
+
+<head>
+	{{#if data.isCookieNew}}
+		<script>
+		// Include the following lines to define the gtag() function when
+		// calling this code prior to your gtag.js or Tag Manager snippet
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+
+		// Call the default command before gtag.js or Tag Manager runs to
+		// adjust how the tags operate when they run. Modify the defaults
+		// per your business requirements and prior consent granted/denied, e.g.:
+		// Check with the clients if it is needed, because it is only the initial condition of the cookie
+		gtag('consent', 'default', {
+			'ad_storage': 'denied',
+			'analytics_storage': 'denied'
+		});
+</script>
+	{{/if}}
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta charset="utf-8">
+
+	{{#if data.seo}}
+		<title>{{data.seo.seoTitle}}</title>
+		<meta name="description" content="{{data.seo.seoDescription}}">
+		<meta name="keywords" content="{{data.seo.seoKeywords}}">
+		<link rel="canonical" href="{{data.seo.canonicalLink}}">
+		{{#each data.seo.alternateLanguageLinks}}
+			<link rel="alternate" hreflang="{{this.languageCulture}}" href="{{this.url}}">
+		{{/each}}
+		{{#if data.seo.hideFromSearchEngines}}
+			<meta name="robots" content="noindex, nofollow">
+			<meta name="googlebot" content="noindex, nofollow">
+		{{else}}
+			<link rel="preconnect" href="https://www.googletagmanager.com">
+			<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+			<meta name="robots" content="index, follow">
+			<meta name="googlebot" content="index, follow">
+		{{/if}}
+	{{/if}}
+
+	{{#if data.openGraph}}
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="{{data.openGraph.canonicalUrl}}">
+		<meta property="og:locale" content="{{data.openGraph.locale}}">
+		<meta property="og:site_name" content="{{data.openGraph.siteName}}">
+		<meta property="og:title" content="{{data.openGraph.title}}">
+		<meta property="og:description" content="{{data.openGraph.description}}">
+		{{#if data.openGraph.image}}
+			<meta property="og:image" content="{{data.openGraph.image.url}}">
+			<meta property="og:image:type" content="image/{{data.openGraph.image.type}}">
+			<meta property="og:image:width" content="{{data.openGraph.image.width}}">
+			<meta property="og:image:height" content="{{data.openGraph.image.height}}">
+			<meta property="og:image:alt" content="{{data.openGraph.image.alternateText}}">
+		{{/if}}
+	{{/if}}
+
+	<!-- main css file -->
+	<link rel="stylesheet" href="{{getPath}}css/style.min.css{{{cssVersion}}}">
+
+	{{#if data.googleTagManagerScript}}
+		<!-- Google Tag Manager -->
+		{{{data.googleTagManagerScript}}}
+		<!-- End Google Tag Manager -->
+	{{/if}}
+
+	<!-- global js file -->
+	<script defer src="{{getPath}}js/global.min.js{{{globalScriptVersion}}}"></script>
+
+	{{#if data.cookieCivic}}
+		{{{data.cookieCivic}}}
+		{{!-- {{> cookie }} --}}
+	{{/if}}
+
+	<link href="/favicon/favicon.ico" rel="icon">
+
+	{{#if (isDevelopment) }}
+		<script defer src="{{getPath}}js/axeLinter.min.js"></script>
+	{{/if}}
+</head>
+
+<body class="{{#if (isMultilanguage)}}lang-{{data.language}} {{/if}}{{bodyCssClass}}">
+	<a class="skip-link" href="#main">Skip to content</a>
+
+	{{#if (isProduction) }}
+	{{#if data.googleTagManagerNoScript}}
+	<!-- Google Tag Manager -->
+	{{{data.googleTagManagerNoScript}}}
+	<!-- End Google Tag Manager -->
+	{{/if}}
+	{{/if}}
+
+	{{> @partial-block }}
+</body>
+
+</html>

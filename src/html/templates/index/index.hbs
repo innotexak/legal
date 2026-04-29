@@ -1,0 +1,15 @@
+{{#> master this }}
+
+{{> header data.header}}
+
+<main class="main" id="main">
+
+	{{#each data.sections}}
+	{{> (lookup this 'moduleAlias') this}}
+	{{/each}}
+</main>
+
+{{> footer data.footer}}
+
+{{/master}}
+

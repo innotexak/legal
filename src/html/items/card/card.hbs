@@ -1,0 +1,8 @@
+<div class="card">
+	{{#if image}}
+	<img class="image" src="{{image.url}}" alt="{{#if image.alternateText}}{{image.alternateText}}{{else}}Card image.{{/if}}">
+	{{/if}}
+	{{#if cardTitle}}
+	<h3 class="card__title h4">{{cardTitle}}</h3>
+	{{/if}}
+</div>

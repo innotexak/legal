@@ -1,0 +1,47 @@
+// ----------  basic-block
+// ------------------------------------------------------------------------------
+
+@use "../abstracts" as *;
+
+.basic-block {
+	padding: 60px 0;
+	background-color: var(--bkg);
+}
+
+.basic-block--dark {
+	.basic-block__title,
+	.basic-block__text,
+	.link {
+		color: $white;
+	}
+}
+
+.basic-block__flex {
+	@include media-breakpoint-up(lg) {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+}
+
+.basic-block__flex--revert {
+	@include media-breakpoint-up(lg) {
+		flex-direction: row-reverse;
+	}
+}
+
+.basic-block__col {
+	@include media-breakpoint-up(lg) {
+		width: 48%;
+	}
+	@include media-breakpoint-down(md) {
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+.basic-block__title,
+.basic-block__text {
+	margin-bottom: 20px;
+}
