@@ -14,7 +14,7 @@ const options = {
 			'EN-301-549',
 		],
 	},
-}; // Place to add custom options.
+};
 
 axe.run(document, options, (err, results) => {
 	if (err) {

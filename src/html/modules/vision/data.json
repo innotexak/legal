@@ -1,0 +1,21 @@
+{
+    "vision": {
+        "slides": [
+            {
+                "background": "assets/images/carousel-img.png",
+                "title": "Vision",
+                "content": "Our Vision is to be the leading legal and professional services business outside London."
+            },
+            {
+                "background": "assets/images/carousel-img-2.png",
+                "title": "Mission",
+                "content": "Our Mission is to recruit and develop the very best talent, with each of us placing clients at the heart of everything we do."
+            },
+            {
+                "background": "assets/images/carousel-img-3.png",
+                "title": "Purpose",
+                "content": "Our Purpose is to challenge and change the delivery of legal and professional services; offering the very best client service of any one in our sector."
+            }
+        ]
+    }
+}

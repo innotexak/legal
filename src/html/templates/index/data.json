@@ -9,7 +9,12 @@
 			">>": "shared/footer/data.json"
 		},
 		
-		"sections": []
+		"sections": [
+			{
+				"moduleAlias":"vision",
+				">>":"modules/vision/data.json"
+			}
+		]
 	}
 }
 
