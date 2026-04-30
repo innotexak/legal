@@ -7,11 +7,11 @@
 	height: 750px;
 
 	@include media-breakpoint-only(md) {
-		height: 100vh;
+		height: 904px;
 	}
 
 	@include media-breakpoint-down(sm) {
-		max-height: 100vh;
+		height: 619px;
 	}
 
 	&__container {
@@ -41,7 +41,7 @@
 		height: 42.5px;
 
 		@include media-breakpoint-down(sm){
-			width: 140px;
+			width: 150px;
 			height: 31px
 		}
 	}
@@ -222,9 +222,11 @@
 		pointer-events: none;
 
 		@include media-breakpoint-only(md) {
-			height: 100%;
+			width: 100%;
 			bottom: 0;
-			top: 0;
+			top: auto;
+			height: 384px;
+			background-image: url('./../assets/images/header-ball-mobile.png');
 		}
 
 		@include media-breakpoint-down(sm) {

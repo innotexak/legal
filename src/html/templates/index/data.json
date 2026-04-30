@@ -17,6 +17,10 @@
 			{
 				"moduleAlias":"financial",
 				">>":"modules/financial/data.json"
+			}, 
+			{
+				"moduleAlias":"at-glance",
+				">>":"modules/at-glance/data.json"
 			}
 		]
 	}
