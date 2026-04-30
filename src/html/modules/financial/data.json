@@ -1,0 +1,52 @@
+{
+	"financial":{
+		"heading":"Financial Highlights",
+		"body":"Our innovative approach has driven significant year on year growth, through a mix of double digit organic growth, and selective acquisitions, including six this year.",
+		"revenue":{
+			"percent":"+41%",
+			"text":"Reported revenue for the period is £74.3m compared to £52.7m in 2019 representing a 41% increase."
+		},
+		"items":[
+			{
+				"title": "Revenue",
+				"figure": "£74.3m",
+				"percent": "+41% (2019: £53m)"
+			},
+			{
+				"title": "Organic revenue growth rate %",
+				"figure": "+10%",
+				"percent": "2019: 15%"
+			},
+			{
+				"title": "Underlying PBT",
+				"figure": "£13.6m",
+				"percent": "+45% (2019: £9.4m)"
+			},
+			{
+				"title": "Reported PBT",
+				"figure": "£4.1m",
+				"percent": "-16.3% (2019: £4.8m)"
+			},
+			{
+				"title": "Cash conversion",
+				"figure": "80%",
+				"percent": "2019: 131%"
+			},
+			{
+				"title": "Net debt",
+				"figure": "£15.9m",
+				"percent": "2019: £14.1m"
+			},
+			{
+				"title": "Underlying EPS",
+				"figure": "14.33p",
+				"percent": "2019: 11.31p"
+			},
+			{
+				"title": "Reported EPS",
+				"figure": "2.44p",
+				"percent": "2019: 5.27p"
+			}
+		]
+	}
+}
