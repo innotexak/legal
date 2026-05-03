@@ -1,12 +1,12 @@
-// ---------- at-glance
-// ------------------------------------------------------------------------------
-
 @use "../abstracts" as *;
 
 .glance {
 	width: 100%;
 	padding:100px 0 30px;
 
+	@include media-breakpoint-down(sm){
+		padding:50px 0 30px;
+	}
 	&__container{
 		display: flex;
 		flex-direction: column;

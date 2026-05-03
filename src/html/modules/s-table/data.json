@@ -1,0 +1,43 @@
+{
+	"serviceTable":{
+		"items":[
+			{
+				"title":"Real Estate",
+				"services":["Asset Management", "construction", "development","planning"],
+				"percent":"35%",
+				"color":"#455364"
+			},
+			{
+				"title":"Dispute Resolution",
+				"services":["Litigation", "debt recovery", "property litigation"],
+				"percent":"28%",
+				"color":"#7E7371"
+			},
+			{
+				"title":"Corporate",
+				"services":["Commercial", "mergers/acquisitions", "banking"],
+				"percent":"17%",
+				"color":"#B3A87C"
+			},
+			{
+				"title":"Employment",
+				"services":[
+					"Strategic HR Projects", 
+					"Busines reorganisation and TUPE", 
+					"Management training",
+					"Litigation/Tribunals",
+					"Strategic audits/reports"
+
+				],
+				"percent":"6%",
+				"color":"#AC672E"
+			},
+			{
+				"title":"Private Client",
+				"services":["Landed Estates", "Tax and Trusts", "Conveyancing","Family"],
+				"percent":"17%",
+				"color":"#B6B7B3"
+			}
+		]
+	}
+}

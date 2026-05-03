@@ -1,0 +1,183 @@
+@use "../abstracts" as *;
+
+.s-table {
+    width: 100%;
+    padding: 40px 0;
+
+    &__container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        color: $white;
+        gap: 0;
+
+        @include media-breakpoint-down(sm) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border: 2px solid $white;
+
+        @include media-breakpoint-down(sm) {
+            flex-direction: row; 
+            height: 147px;       
+            width: 100%;         
+            border-bottom: none; 
+            &:last-child {
+                border-bottom: 2px solid $white;
+            }
+        }
+
+        &-header {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding: 20px 10px;
+            flex-direction: column;
+            text-align: center;
+            overflow: visible;
+
+            @include media-breakpoint-down(sm) {
+                width: 80px;
+                height: 100%; 
+                padding: 10px;
+            }
+
+        }
+
+        &-body {
+            position: relative;
+            z-index: 0;
+            flex: 1;
+            list-style: none;
+            margin: 0;
+            padding: 40px 16px 24px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+            text-transform: capitalize;
+
+            @include media-breakpoint-down(sm) {
+                padding: 20px 10px;
+                justify-content: center;
+            }
+        }
+
+        &-footer {
+            padding: 16px;
+            text-align: center;
+            border-top: 4px solid $white;
+
+            @include media-breakpoint-down(sm) {
+                width: 100px;
+                border-top: none;
+                border-left: 2px solid $white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+				writing-mode: vertical-rl; 
+				transform: rotate(180deg);  
+            	white-space: nowrap;
+            }
+        }
+    }
+
+    &__heading {
+        font-size: 22px;
+        font-weight: 700;
+        color: $white;
+        margin: 0;
+        line-height: 1.2;
+
+        @include media-breakpoint-only(md){
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            font-size: 14px;
+            line-height: 20px;
+            writing-mode: vertical-rl; 
+            transform: rotate(180deg);  
+        }
+    }
+
+    &__item {
+        font-size: 14px;
+        font-weight: 400;
+        color: rgba($white, 0.9);
+        line-height: 1.4;
+
+        @include media-breakpoint-down(md){
+            font-size: 10px;
+            line-height: 14px;
+        }
+    }
+
+    &__percent {
+        font-size: 28px;
+        font-weight: 700;
+        color: $white;
+        display: block;
+
+        @include media-breakpoint-down(md) {
+            font-size: 22px;
+            line-height: 30px;
+        }
+    }
+}
+
+
+
+            .row-one, .row-two {
+                height: 2px;
+                width: 54%;
+                background-color: $white;
+                position: absolute;
+                bottom: -1px;
+                border: 1px solid $white;
+
+                @include media-breakpoint-down(sm) {
+                   width: 95%;      
+                    right: 0;     
+                    left: auto;       
+                    bottom: auto;   
+                }
+            }
+
+            .row-one {
+                left: -5px;
+                transform: rotate(20deg);
+                transform-origin:none right;
+
+                @include media-breakpoint-down(sm) {
+                    top: 50%;
+                    transform: rotate(-75deg);
+                    transform-origin: right center;
+                }
+            }
+
+            .row-two {
+                right: -5px;
+                transform: rotate(-20deg);
+                transform-origin: none left;
+
+                @include media-breakpoint-down(sm) {
+                     top: 50%;
+                    transform: rotate(75deg);
+                    transform-origin: right center;
+                }
+            }
