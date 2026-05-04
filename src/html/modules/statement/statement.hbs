@@ -1,0 +1,56 @@
+<section class="statement" data-script="statement-tab">
+  <div class="wrap">
+    {{#if statement}}
+    <div class="statement__container">
+
+      <div class="statement__header">
+        {{#each statement}}
+          <button
+            class="statement__button"
+            data-tab="{{this.id}}"
+            aria-selected="false"
+            type="button"
+          >
+            {{this.tabtitle}}
+          </button>
+        {{/each}}
+      </div>
+
+      <div class="statement__body">
+        <div class="statement__empty"></div>
+
+        <div class="statement__panels">
+          {{#each statement}}
+            <div
+              class="statement__panel"
+              data-content="{{this.id}}"
+            >
+              <p class="statement__quote">{{this.content}}</p>
+
+              <h3 class="statement__name">{{this.name}}</h3>
+              <p class="statement__type">{{this.type}}</p>
+
+              <p class="statement__subcontent">{{this.subContent}}</p>
+
+              <div class="statement__download">
+                <img
+                  src="{{this.downloadIcon.src}}"
+                  alt="{{this.downloadIcon.alternativeText}}"
+                  class="statement__download-image"
+                />
+                <p class="statement__download-text">
+                  {{this.file.name}}
+                  <span>
+                    <strong>{{this.file.type}}</strong> 
+                    {{this.file.size}}
+                  </span>
+                </p>
+              </div>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+    {{/if}}
+  </div>
+</section>

@@ -25,6 +25,10 @@
 			{
 				"moduleAlias":"s-table",
 				">>":"modules/s-table/data.json"
+			},
+			{
+				"moduleAlias":"statement",
+				">>":"modules/statement/data.json"
 			}
 		]
 	}
