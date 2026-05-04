@@ -1,0 +1,24 @@
+<section class="investment">
+	<div class="wrap">
+		{{#if investment}}
+		<div class="investment__container">
+			{{#if investment.heading}}
+			<div class="investment__header">
+				<h1 class="investment__heading">{{investment.heading.main}}</h1>
+				<p class="investment__subheading">{{investment.heading.sub}}</p>
+			</div>
+			{{/if}}
+
+			<p class="investment__description">{{investment.description}}</p>
+			<div class="investment__body">
+				{{#if investment.items}}
+					{{#each investment.items}}
+						{{> investment-card item=this}}
+					{{/each}}
+				{{/if}}
+			</div>
+			<p class="investment__remark">{{investment.remark}}</p>
+		</div>
+		{{/if}}
+	</div>
+</section>

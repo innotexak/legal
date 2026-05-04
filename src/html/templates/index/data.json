@@ -29,6 +29,11 @@
 			{
 				"moduleAlias":"statement",
 				">>":"modules/statement/data.json"
+			},
+
+			{
+				"moduleAlias":"investment",
+				">>":"modules/investment/data.json"
 			}
 		]
 	}
