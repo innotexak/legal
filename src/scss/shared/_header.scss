@@ -256,10 +256,10 @@
 			margin-left: calc(-50vw + 50%);
 			width: 100vw;
 			position: fixed;
-			padding: 0 13%;
+			padding: 0 9%;
 
 			> *{
-				width: 33%;
+				flex: 0 0 calc((100% - 40px) / 3);
 			}
 			
 			>:last-child{

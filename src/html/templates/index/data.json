@@ -13,6 +13,10 @@
 			{
 				"moduleAlias":"vision",
 				">>":"modules/vision/data.json"
+			},
+			{
+				"moduleAlias":"financial",
+				">>":"modules/financial/data.json"
 			}
 		]
 	}

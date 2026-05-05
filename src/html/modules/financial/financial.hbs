@@ -1,0 +1,40 @@
+<section class="financial" aria-labelledby="financial-heading">
+	<div class="wrap">
+		{{#if financial}}
+		<div class="financial__container">
+
+			<div class="financial__left">
+				<div class="financial__left-top">
+					<h2 class="financial__top-heading">
+						{{financial.heading}}
+					</h2>
+
+					<p class="financial__top-body">
+						{{financial.body}}
+					</p>
+				</div>
+
+				<div class="financial__left-bottom">
+					<p class="financial__bottom-percent">
+						{{financial.revenue.percent}}
+					</p>
+					<p class="financial__bottom-text">
+						{{financial.revenue.text}}
+					</p>
+				</div>
+			</div>
+
+			<div class="financial__right">
+				{{#each financial.items}}
+					<dl class="financial__right-container">
+						<dt class="financial__right-title">{{this.title}}</dt>
+						<dd class="financial__right-figure">{{this.figure}}</dd>
+						<dd class="financial__-right-percent">{{this.percent}}</dd>
+					</dl>
+				{{/each}}
+			</div>
+
+		</div>
+		{{/if}}
+	</div>
+</section>
