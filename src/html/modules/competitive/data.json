@@ -1,0 +1,40 @@
+{
+	"competitive":{
+		"heading":"Competitive Advantage",
+		"content":"“Legal” has four sources of competitive advantage, which we turn into results via our distinct business model which creates a virtuous cycle of ever growing value.",
+		"items":[
+			{
+				"image":{
+					"src":"assets/images/office.png",
+					"alternativeText":"Market positioning"
+				},
+				"title":"Market Positioning",
+				"content":"We are the dominant player in most of our chosen locations, offering high quality services from a lower cost base outside London."
+			},
+			{
+				"image":{
+					"src":"assets/images/office-2.png",
+					"alternativeText":"Corporate structure"
+				},
+				"title":"Team Based Culture",
+				"content":"Culture is often referred to as a key ingredient of a successful business. At “Legal” we regard it as the primary driver."
+			},
+			{
+				"image":{
+					"src":"assets/images/office-3.png",
+					"alternativeText":"Team based structure"
+				},
+				"title":"Corporate Structure",
+				"content":"We operate an Alternative Business Structure (ABS), rather than the traditional LLP law firm model that faces significant structural challenges over the medium term."
+			},
+			{
+				"image":{
+					"src":"assets/images/office-4.png",
+					"alternativeText":"Scalable Operating Modele"
+				},
+				"title":"Scalable Operating Model",
+				"content":"Our consistent way of working across the business allows our fee earners to quickly transition from the traditional practices of law firms into those of a client centric and agile modern legal and professional services business."
+			}
+		]
+	}
+}

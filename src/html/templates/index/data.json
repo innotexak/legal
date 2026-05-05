@@ -38,6 +38,10 @@
 			{
 				"moduleAlias":"business",
 				">>":"modules/business/data.json"
+			},
+			{
+				"moduleAlias":"competitive",
+				">>":"modules/competitive/data.json"
 			}
 		]
 	}
