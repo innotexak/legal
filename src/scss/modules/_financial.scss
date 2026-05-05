@@ -108,7 +108,7 @@
 		width:100%;
 		display: flex;
 		flex-wrap: wrap;
-		gap:20px;
+		gap:2px;
 		color:$grey;
 		box-sizing: border-box;
 
@@ -116,13 +116,12 @@
 			width: 45%;
 
 			@include media-breakpoint-only(md){
-				flex: 0 0 calc((100% - 40px) / 3);
-				padding-bottom: 20px;
+				width: 32%;
 			}
 
 			@include media-breakpoint-down(sm){
-				flex: 0 0 calc((100% - 40px) / 2);
-				padding-bottom:30px
+				width: 47%;
+				gap:30px;
 			}
 		}
 
