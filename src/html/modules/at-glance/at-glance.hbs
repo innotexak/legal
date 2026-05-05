@@ -1,0 +1,91 @@
+<section class="glance">
+  <div class="wrap">
+    {{#if atGlance}}
+    <div class="glance__container">
+
+      <h1 class="glance__heading">
+        {{atGlance.heading}}
+      </h1>
+
+      <div class="glance__section glance__section--who">
+        <h2 class="glance__title">
+          {{atGlance.whoWeAre.title}}
+        </h2>
+        
+        <p class="glance__text">
+          {{atGlance.whoWeAre.content}}
+        </p>
+      </div>
+
+      <div class="glance__row">
+
+        <div class="glance__section glance__section--what">
+          <h2 class="glance__title">
+            {{atGlance.whatWeDo.title}}
+          </h2>
+          
+          <p class="glance__text">
+            {{atGlance.whatWeDo.content}}
+          </p>
+
+          <p class="glance__subtext">
+            {{atGlance.whatWeDo.subContent}}
+          </p>
+        </div>
+
+        <div class="glance__section glance__section--clients">
+          <h2 class="glance__title">
+            {{atGlance.whoWeWorkWith.title}}
+          </h2>
+          
+          <p class="glance__text">
+            {{atGlance.whoWeWorkWith.content}}
+          </p>
+        </div>
+
+      </div>
+
+      <div class="separator"></div>
+
+      <div class="glance__row glance__row--split">
+
+        <div class="glance__section glance__section--location">
+          <h2 class="glance__title">
+            {{atGlance.whereWeOperate.title}}
+          </h2>
+          
+          <p class="glance__text">
+            {{atGlance.whereWeOperate.content}}
+          </p>
+          
+          {{#if atGlance.whereWeOperate.locations}}
+          <ul class="glance__list">
+            {{#each atGlance.whereWeOperate.locations}}
+            <li class="glance__list-item">
+              <img 
+                src="{{../atGlance.whereWeOperate.locationIcon.src}}" 
+                alt="{{../atGlance.whereWeOperate.locationIcon.alternativeText}}" 
+                class="glance__list-icon"
+              >
+              {{this}}
+            </li>
+            {{/each}}
+          </ul>
+          {{/if}}
+        </div>
+
+        <!-- Map -->
+        <div class="glance__media">
+          <img 
+            src="{{atGlance.whereWeOperate.map.src}}" 
+            alt="{{atGlance.whereWeOperate.map.alternativeText}}"
+            class="glance__image"
+          >
+        </div>
+
+      </div>
+
+    </div>
+    {{/if}}
+  </div>
+</section>

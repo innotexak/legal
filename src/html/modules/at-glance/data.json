@@ -1,0 +1,31 @@
+{
+	"atGlance":{
+		"heading":"At a Glance",
+		"whoWeAre":{
+			"title":"Who we are",
+			"content":"“Legal” has grown to be a leading legal and professional services business outside London, with 934 fee earners operating from 13 offices across the UK."
+		},
+		"whatWeDo":{
+			"title":"What we do",
+			"content":"“Legal” provides a full service offering to corporate clients as well as synergistic services to high net worth individuals, who are typically clients of the Group’s corporate and commercial services.",
+			"subContent":"Our extensive expertise has been strengthened further through the recruitment of high-calibre talent and acquisitions during the year."
+		},
+		"whoWeWorkWith":{
+			"title":"Who we work with",
+			"content":"We build longstanding relationships with a range of clients from multinational corporations to national corporates and small and medium enterprises."
+		},
+		"whereWeOperate":{
+			"title":"Where we operate",
+			"content":"We are focused on key, attractive markets in the UK outside London, currently operating from 13 offices where we can be close to our client base and build strong local market knowledge and networks.",
+			"locations":["Birmingham","Cheltenham","Chester", "Crawley", "Leeds", "Leicester","Maidstone", "Manchester","Nottingham","Oxford","Stoke","Wilmslow", "York"],
+			"map":{
+				"src":"assets/images/map-2.png",
+				"alternativeText":"map"
+			},
+			"locationIcon":{
+				"src":"assets/images/location-icon.png",
+				"alternativeText":"location icon"
+			}
+		}
+	}
+}
