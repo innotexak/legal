@@ -34,6 +34,10 @@
 			{
 				"moduleAlias":"investment",
 				">>":"modules/investment/data.json"
+			},
+			{
+				"moduleAlias":"business",
+				">>":"modules/business/data.json"
 			}
 		]
 	}
