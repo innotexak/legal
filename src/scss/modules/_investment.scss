@@ -77,7 +77,7 @@
 		gap: 30px;
 
 		@include media-breakpoint-down(sm){
-			max-width: 370px;
+			width: 100%;
 			overflow-x: auto;
 			padding-bottom:50px;
 			gap: 10px;

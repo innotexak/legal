@@ -5,6 +5,7 @@
 
 .investment-card {
 	width: 100%;
+	min-width: 224px;
 	background-color: $white;
 
 	&__container{
@@ -36,7 +37,7 @@
 			font-size: 23px;
 			line-height: 30px;
 			letter-spacing: 0%;
-			
+
 			@include media-breakpoint-down(md){
 				font-size: 18px;
 				line-height: 26px;
@@ -70,7 +71,7 @@
 
 			@include media-breakpoint-down(md){
 				font-size: 40px;
-				padding:20px;
+				padding: 0 20px;
 			}
 		}
 
@@ -124,12 +125,10 @@
 			50% 100%,      
 			0% calc(100% - 20px)  
 		);
+	}
 
-		.wrap{
-			padding: 0;
-		}
 
-		&-text {
+	&__footer-text {
 			font-size: 18px;
 			font-weight: 700;
 			text-align: center;
@@ -143,9 +142,6 @@
 				padding:20px;
 			}
 		}
-	}
-
-
 
 
 

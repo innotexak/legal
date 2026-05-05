@@ -1,4 +1,4 @@
-<section class="financial" aria-labelledby="financial-heading">
+<section class="financial" aria-labelledby="financial-heading" data-script="count-up"">
 	<div class="wrap">
 		{{#if financial}}
 		<div class="financial__container">
@@ -14,8 +14,7 @@
 					</p>
 				</div>
 
-				<div class="financial__left-bottom">
-					<p class="financial__bottom-percent">
+				<div class="financial__left-bottom" >
 						{{financial.revenue.percent}}
 					</p>
 					<p class="financial__bottom-text">
@@ -28,8 +27,16 @@
 				{{#each financial.items}}
 					<dl class="financial__right-container">
 						<dt class="financial__right-title">{{this.title}}</dt>
-						<dd class="financial__right-figure">{{this.figure}}</dd>
-						<dd class="financial__-right-percent">{{this.percent}}</dd>
+							<dd 
+							class="financial__right-figure"
+							data-countup
+							data-count="{{this.figure.value}}"
+							data-prefix="{{this.figure.prefix}}"
+							data-suffix="{{this.figure.suffix}}"
+							>
+							0
+							</dd>
+							<dd class="financial__-right-percent">{{this.percent}}</dd>
 					</dl>
 				{{/each}}
 			</div>

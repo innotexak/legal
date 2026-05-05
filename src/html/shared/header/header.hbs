@@ -3,7 +3,7 @@
 		<div class="header__container">
 			<div class="header__top js-header__top">
 				{{#if logo}}
-				<a href="/" class="header__home">
+				<a hr	ef="/" class="header__home">
 					<img 
 					class="header__logo js-header__logo" 
 					src="{{logo.src}}" 
@@ -16,19 +16,27 @@
 				<span class="header__title">{{title}}</span>
 				
 				{{#if hamburger}}
-				<span class="header__hamburger js-hamburger-toggle"
+				<button 
+					class="header__hamburger js-hamburger-toggle"
+					aria-label="Toggle navigation menu"
+					aria-expanded="false"
 					data-icon-light="{{hamburger.src}}"
 					data-icon-dark="{{hamburger.light.src}}"
 					data-icon-open="{{hamburger.open.src}}">
-					<img class="js-hamburger-icon" src="{{hamburger.light.src}}" alt="{{hamburger.alternateText}}">
-				</span>
+					<img 
+					class="js-hamburger-icon" 
+					src="{{hamburger.light.src}}" 
+					alt="{{hamburger.alternateText}}"
+					aria-hidden="true"
+					>
+				</button>
 				{{/if}}
 			</div>
 
 			<div class="header__left">
 				{{#if report}}
 				<div class="header__content">
-					<p class="header__content-subtitle">{{report.subtitle}}</p>
+					<p class="header__content-subtitle" aria-label="{{report.subtitle}}">{{report.subtitle}}</p>
 					<span class="header__content-stroke"></span>
 					<h1 class="header__content-maintitle">{{{formatText report.maintitle}}}</h1>
 					<p class="header__content-text">{{report.content}}</p>
@@ -39,12 +47,20 @@
 	</div>
 
 	{{#if menu}}
-	<nav class="header__nav-close js-header__nav-close">
+	<nav 
+		id="main-navigation"
+		class="header__nav-close js-header__nav-	`	close"
+		aria-label="Main menu"
+	>
 		<div class="wrap">
 			<ul class="header__nav-list" role="menubar">
 				{{#each menu}}
 				<li class="header__nav-item" role="menuitem">
-					<a class="header__nav-link" href="{{this.url}}"{{#ifContains this.target "_blank"}} target="_blank" rel="noopener noreferrer"{{/ifContains}}>{{this.text}}</a>
+					<a 
+					class="header__nav-link" 
+					href="{{this.url}}"{{#ifContains this.target "_blank"}} 
+					target="_blank"
+					 rel="noopener noreferrer"{{/ifContains}}>{{this.text}}</a>
 				</li>
 				{{/each}}
 			</ul>
@@ -52,5 +68,5 @@
 	</nav>
 	{{/if}}
 
-	<div class="header__ball"></div>
+	<div class="header__ball" aria-hidden="true"></div>
 </header>
