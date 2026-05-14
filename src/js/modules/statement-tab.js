@@ -27,9 +27,9 @@ const statement = (() => {
 	}
 
 	function activateTab(section, tabId) {
-		const buttons = section.querySelectorAll('.statement__button');
-		const panels = section.querySelectorAll('.statement__panel');
-		const emptyDiv = section.querySelector('.statement__empty');
+		const buttons = section.querySelectorAll('.js-statement__button');
+		const panels = section.querySelectorAll('.js-statement__panel');
+		const emptyDiv = section.querySelector('.js-statement__empty');
 
 		const device = getDeviceType();
 		const src = BG_IMAGES[tabId] ? BG_IMAGES[tabId][device] : null;
@@ -65,7 +65,7 @@ const statement = (() => {
 		const sections = document.querySelectorAll('[data-script="statement-tab"]');
 
 		sections.forEach(section => {
-			const buttons = section.querySelectorAll('.statement__button');
+			const buttons = section.querySelectorAll('.js-statement__button');
 			if (!buttons.length) return;
 
 			buttons.forEach(btn => {
@@ -75,7 +75,7 @@ const statement = (() => {
 			activateTab(section, buttons[0].dataset.tab);
 
 			window.addEventListener('resize', () => {
-				const activeBtn = section.querySelector('.statement__button.is-active');
+				const activeBtn = section.querySelector('.js-statement__button.is-active');
 				if (activeBtn) activateTab(section, activeBtn.dataset.tab);
 			});
 		});

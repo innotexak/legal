@@ -6,7 +6,7 @@
       <div class="statement__header">
         {{#each statement}}
           <button
-            class="statement__button"
+            class="statement__button js-statement__button"
             data-tab="{{this.id}}"
             aria-selected="false"
             type="button"
@@ -17,12 +17,12 @@
       </div>
 
       <div class="statement__body">
-        <div class="statement__empty"></div>
+        <div class="statement__empty js-statement__empty"></div>
 
         <div class="statement__panels">
           {{#each statement}}
             <div
-              class="statement__panel"
+              class="statement__panel js-statement__panel"
               data-content="{{this.id}}"
             >
               <p class="statement__quote">{{this.content}}</p>

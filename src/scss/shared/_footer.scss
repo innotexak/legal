@@ -46,7 +46,14 @@
 		
 		&-link{
 			color:rgba($white, 0.8);
+			
+			span{
+				color:rgba($light-grey,0.5);
+				padding:2.5px;
+			}
 		}
+
+
 
 		@include media-breakpoint-down(sm){
 			flex-wrap: wrap;
