@@ -1,49 +1,52 @@
 {
-	"culture":{
-		"items":[
-			{
-				"tabtitle":"Culture",
-				"heading":"Our culture in our colleagues’ words:",
-				"bgImage":{
-					"src":"assets/images/culture-lady-bg.png",
-					"alternativeText":"White lady background picture"
-				}
+	"data":{
+		
+		"culture":{
+			"tabtitle":"Culture",
+			"heading":"Our culture in our colleagues’ words:",
+			"bgImage":{
+				"src":"assets/images/culture-lady-bg.png",
+				"alternativeText":"White lady background picture"
 			},
-			{
-				"tabtitle":"Clients",
-				"content":[
-					{
-						"image":{
-						"src":"assets/images/open-quotation.png",
-						"alternativeText":"quotation mark"
-						},
-						"name":"Ed Gretton",
-						"position":"Head of Legal, Hanson",
-						"text":"“Legal” is very important to us as a partner, representing great value, but also trust and integrity. When we need to get things done very quickly, “Legal” will do everything they can to get our projects over the line and, when we deal with complex issues, they will put the right expertise our way to deal with those situations. We hope our longstanding relationship continues a long way into the future."
-					},
-					{
-						"image":{
-						"src":"assets/images/open-quotation.png",
-						"alternativeText":"quotation mark"
-						},
-						"name":"Martin Pryce",
-						"position":"Director, Fprop plc",
-						"text":"“Legal” is an integral part of our business - for all intents and purposes, almost our in-house lawyers. Over the more than ten years we’ve worked with them, they have been involved in every single acquisition. “Legal” team is very approachable and they have depth to their teams across commercial property and litigation, where they are able to bring in additional expertise quickly and in a cost-effective manner. I would describe “Legal” as commercial, efficient, professional."
-					}
-				]
-					
-				
-				
-			},
-			{
-				"tabtitle":"People",
-				"heading":"Caring for our People and Communities",
-				"text":"The Group is proud of its recent employee net promoter score of +36 and believe it reflects a supportive environment that empowers colleagues to be themselves and use their judgement to do what’s right for clients, the business and the wider community. Our aspiration is to deliver 50,000+ hours to our community through our 4OurCommunity programme.",
-				"image":{
-					"src":"assets/images/culture-lady-bg.png",
-					"alternativeText":"White lady background picture"
-				}
+			"image":{
+				"src":"assets/images/circle-chat.png",
+				"alternativeText":"White lady picture"
 			}
-		]
+			
+		},
+		"clients":{
+			"tabtitle":"Clients",
+			"content":[
+				{
+					"image":{
+					"src":"assets/images/open-quotation.png",
+					"alternativeText":"quotation mark"
+					},
+					"name":"Ed Gretton",
+					"position":"Head of Legal, Hanson",
+					"text":"“Legal” is very important to us as a partner, representing great value, but also trust and integrity. When we need to get things done very quickly, “Legal” will do everything they can to get our projects over the line and, when we deal with complex issues, they will put the right expertise our way to deal with those situations. We hope our longstanding relationship continues a long way into the future."
+				},
+				{
+					"image":{
+					"src":"assets/images/open-quotation.png",
+					"alternativeText":"quotation mark"
+					},
+					"name":"Martin Pryce",
+					"position":"Director, Fprop plc",
+					"text":"“Legal” is an integral part of our business - for all intents and purposes, almost our in-house lawyers. Over the more than ten years we’ve worked with them, they have been involved in every single acquisition. “Legal” team is very approachable and they have depth to their teams across commercial property and litigation, where they are able to bring in additional expertise quickly and in a cost-effective manner. I would describe “Legal” as commercial, efficient, professional."
+				}
+			]
+		},
+
+		"people":{
+			"tabtitle":"People",
+			"heading":"Caring for our People and Communities",
+			"text":"The Group is proud of its recent employee net promoter score of +36 and believe it reflects a supportive environment that empowers colleagues to be themselves and use their judgement to do what’s right for clients, the business and the wider community. Our aspiration is to deliver 50,000+ hours to our community through our 4OurCommunity programme.",
+			"image":{
+				"src":"assets/images/people.png",
+				"alternativeText":"People picture"
+			}
+		}
+		
 	}
 }

@@ -23,3 +23,25 @@ $site-colors: (
 $box-shadow-color: rgb(0, 0, 0, 0.05);
 $light-blue-grey: #d3dee4;
 $grey-bg: #dae3ed;
+$color-ink: #111;
+$color-ink-muted: #666;
+$color-surface: #fafaf8;
+$color-accent: #c8a96e;
+$color-accent-dim: rgb(200, 169, 110, 0.15);
+$color-line: #e2e0da;
+$color-white: #fff;
+$font-display: 'Playfair Display', georgia, serif;
+$font-body: 'DM Sans', 'Helvetica Neue', sans-serif;
+$ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+$ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+$tab-bar-height: 64px;
+$border-radius: 4px;
+
+
+%reset-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+

@@ -44,6 +44,10 @@
 				">>":"modules/competitive/data.json"
 			},
 			{
+				"moduleAlias":"culture",
+				">>":"modules/culture/data.json"
+			},
+			{
 				"moduleAlias":"download",
 				">>":"modules/download/data.json"
 			}

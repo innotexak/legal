@@ -1,21 +1,25 @@
-// ---------- download
-// ------------------------------------------------------------------------------
-
 @use "../abstracts" as *;
 
 .download {
 	width: 100%;
 	padding:40px;
+	background-repeat: no-repeat;
+	background-position: bottom left;
+	background-size: cover;
 
 	@include media-breakpoint-only(md){
-		background-repeat: no-repeat;
-		background-position: top center;
-		background-size: cover;
 		background-image: url("./../assets/images/tablet-download-bg.png");
+		padding:40px 0;
+
+		.wrap{
+			padding:0; 
+		}
 	}
 
 	@include media-breakpoint-down(sm){
 		background-image: url("./../assets/images/mobile-download-bg.png");
+		padding:40px 0;
+	
 	}
 
 	&__container{
@@ -27,7 +31,9 @@
 		gap:10px;
 		margin: 40px 0;
 
-		@include media-breakpoint-down(md){
+	
+
+		@include media-breakpoint-down(sm){
 			flex-direction: column;
 			margin:0;
 		}
@@ -55,6 +61,10 @@
 		letter-spacing: 0;
 		color:$old-grey;
 		padding:20px; 
+
+		@include media-breakpoint-down(sm){
+			padding:10px 0;
+		}
 	}
 
 	&__content{
@@ -73,30 +83,28 @@
 	&__media{
 		flex:1 1 100%;
 	}
-}
 
-
-	.card {
+	&__card {
 		display: block;
 		margin:15px 0;
-	
-		&__body{
+		cursor: pointer;
+		
+		&-body{
 			display: flex;
 			justify-content: flex-start;
 			align-items: center;
 			gap:7px;
-		
+			
 			img{
 				width: 40px;
 				height: 40px;
-			}
+			}	
+		}
 
-			&-text{
+		&-text{
 				display: flex;
 				flex-direction: column;
 				color:$old-grey;
-	
-			}
 		}
 
 		.uppercase{
@@ -108,3 +116,6 @@
 			color: rgba($old-grey, 0.5)
 		}
 	}
+}
+
+

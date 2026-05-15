@@ -5,11 +5,11 @@
 			<div class="download__content">
 				<h1 class="download__heading">{{download.heading}}</h1>
 				{{#if download.fullReport}}
-				<h3 class="download__subheading">{{download.fullReport.subHeading}}</h3>
-					<div class="card">
-						<div class="card__body">
+				<h2 class="download__subheading">{{download.fullReport.subHeading}}</h2>
+					<div class="download__card">
+						<div class="download__card-body">
 						<img src="{{download.fullReport.icon.src}}" alt="{{download.fullReport.icon.alternativeText}}">
-						<p class="card__body-text">
+						<p class="download__card-text">
 							<span>{{download.fullReport.title}}</span>
 							<strong class="faint-text">
 								<span class="uppercase">{{download.fullReport.file.ext}}</span>{{download.fullReport.file.size}}{{download.fullReport.file.unit}}
@@ -24,10 +24,10 @@
 					<ul class="content__list">
 						<h3 class="download__subheading">{{download.chapter.subHeading}}</h3>
 						{{#each download.chapter.items}}
-						<li class="card">
-							<div class="card__body">
+						<li class="download__card">
+							<div class="download__card-body">
 								<img src="{{../download.fullReport.icon.src}}" alt="{{../download.fullReport.icon.alternativeText}}">
-								<p class="card__body-text">
+								<p class="download__card-text">
 									<span>{{this.title}}</span>
 									<strong class="faint-text"> <span class="uppercase">{{this.file.ext}}</span>{{this.file.size}}{{this.file.unit}}</strong>
 								</p>
