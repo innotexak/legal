@@ -1,0 +1,46 @@
+{
+	"business":{
+		"heading":"Business Model",
+		"content":"Fuelled by our passion for creating the leading legal and professional services business outside London, our business model enables us to deliver value by executing our four strategic pillars:",
+		"items":[
+			{
+				"image":{
+					"src":"assets/images/growth.png",
+					"alternativeText":"growth icon"
+				},
+				"text":"Grow \n Organically"
+			},
+			{
+				"image":{
+					"src":"assets/images/strategy.png",
+					"alternativeText":"strategy icon"
+				},
+				"text":"Strategic \n Acquisitions"
+			},
+			{
+				"image":{
+					"src":"assets/images/operation.png",
+					"alternativeText":"operation icon"
+				},
+				"text":"Scale the \n Operation"
+			},
+			{
+				"image":{
+					"src":"assets/images/technology.png",
+					"alternativeText":"technology icon"
+				},
+				"text":"Exploit Technology \n and Data"
+			}
+		],
+
+		"downloadIcon": {
+			"src": "assets/images/arrow-down.png",
+			"alternativeText": "Download Icon"
+      	},
+		"file": {
+			"name": "Business Model",
+			"size": "0.6kb",
+			"type": "pdf"
+      }
+	}
+}

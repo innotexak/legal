@@ -25,6 +25,31 @@
 			{
 				"moduleAlias":"s-table",
 				">>":"modules/s-table/data.json"
+			},
+			{
+				"moduleAlias":"statement",
+				">>":"modules/statement/data.json"
+			},
+
+			{
+				"moduleAlias":"investment",
+				">>":"modules/investment/data.json"
+			},
+			{
+				"moduleAlias":"business",
+				">>":"modules/business/data.json"
+			},
+			{
+				"moduleAlias":"competitive",
+				">>":"modules/competitive/data.json"
+			},
+			{
+				"moduleAlias":"culture",
+				">>":"modules/culture/data.json"
+			},
+			{
+				"moduleAlias":"download",
+				">>":"modules/download/data.json"
 			}
 		]
 	}

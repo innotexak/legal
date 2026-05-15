@@ -22,6 +22,7 @@
 	&__legal{
 		display: flex;
 		align-items: center;
+		flex-wrap: wrap;
 
 		@include media-breakpoint-down(sm){
 			width: 100%;
@@ -35,10 +36,24 @@
 		justify-content: flex-start;
 		align-items: center;
 		gap:10px;
+
+		&-list{
+			display: inline-block;
+			justify-content: center;
+			align-items: center;
+
+		}
 		
 		&-link{
 			color:rgba($white, 0.8);
+			
+			span{
+				color:rgba($light-grey,0.5);
+				padding:2.5px;
+			}
 		}
+
+
 
 		@include media-breakpoint-down(sm){
 			flex-wrap: wrap;

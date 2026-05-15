@@ -1,0 +1,275 @@
+@use "../abstracts" as *;
+
+.statement {
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+
+
+  &__container {
+    width: 100%;
+    position: relative;
+  }
+
+  &__header {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    padding:0 20px;
+
+    @include media-breakpoint-down(sm) {
+      overflow-x: auto;
+      gap: 10px;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar { 
+        display: none; 
+      }
+    }
+  }
+
+  &__button {
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: $grey;
+    padding: 1rem 0;
+    white-space: nowrap;
+    transition: color 0.25s ease;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 34px;
+    letter-spacing: 0;
+
+
+    @include media-breakpoint-only(md) {
+      font-size: 20px;
+      line-height: 26px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: 0.95rem;
+      margin-right: 24px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: transparent;
+      transition: background-color 0.25s ease;
+    }
+
+    &:hover {
+      color: rgba($grey, 0.7);
+    }
+
+    &.is-active {
+      color: $black;
+
+      &::after {
+        background-color: $black;
+      }
+    }
+  }
+
+  &__body {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    min-height: 520px;
+    gap:40px;
+
+    @include media-breakpoint-only(md) {
+      flex-direction: column;
+      min-height: 460px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+     
+      
+    }
+  }
+
+  &__empty {
+    flex: 0 0 38%;
+
+    @include media-breakpoint-only(md) {
+      flex: 0 0 auto;
+      width: 100%;
+      height: 461px;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      display: block;
+    
+    }
+
+    @include media-breakpoint-down(sm) {
+        flex: 0 0 auto;
+        width: 100%;
+        height: 300px;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        display: block;
+
+    
+    }
+  }
+
+  &__panels {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3.5rem 3rem 3.5rem 1.5rem;
+    box-sizing: border-box;
+
+    @include media-breakpoint-only(md) {
+      padding: 2.5rem 2rem 2.5rem 1.25rem;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding: 1.75rem 1.25rem 2rem;
+      background-color: $white;
+    }
+  }
+
+  &__panel {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+   
+    &.is-active {
+      display: flex;
+    }
+  }
+
+  &__quote {
+    color: $grey;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 42px;
+    letter-spacing: 0%;
+    padding:0 0 40px;
+
+    @include media-breakpoint-only(md) {
+        font-size: 23px;
+        line-height: 33px;
+    }
+
+    @include media-breakpoint-down(sm) {
+        font-size: 18px;
+        line-height: 28px;
+    }
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0;
+    color: $grey;
+    margin: 0 0 4px;
+
+    @include media-breakpoint-down(sm){
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__type {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0;
+    color: $grey;
+    margin: 0 0 36px;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 14px;
+    }
+  }
+
+  &__subcontent {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0;
+    color: rgba($grey, 0.6);
+    margin: 0 0 30px;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+
+  &__download {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    width: fit-content;
+
+    &:focus-visible {
+      outline: 2px solid $black;
+      outline-offset: 2px;
+      box-shadow:0 0 0 0 2px rgba($black, 0.5);
+      border-radius: 2px;
+    }
+
+    &-image {
+      width: 36px;
+      height: 36px;
+      object-fit: contain;
+      flex-shrink: 0;
+
+      @include media-breakpoint-down(sm) {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+  
+  }
+  &__download-text {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0;
+      color: $grey;
+      margin: 0;
+
+      span {
+        display: block;
+        font-weight: 400;
+        font-size: 12px;
+        color: $grey;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+
+        strong {
+          font-weight: 600;
+          margin-right: 4px;
+        }
+      }
+    }
+
+    @include media-breakpoint-down(md){
+      .wrap{
+        padding:0;
+      }
+    }
+}
+

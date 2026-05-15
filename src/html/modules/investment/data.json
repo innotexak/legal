@@ -1,0 +1,41 @@
+{
+	"investment":{
+		"heading":{
+			"main":"Investment Case",
+			"sub":"A strong track record in a highly attractive market."
+		},
+
+		"description":"Experienced operator delivering first class returns",
+		"remark":"*Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+
+		"items":[
+			{
+				"title":"City quality from a competitive cost base",
+				"subtitle":"Underlying profit before tax",
+				"figure":"£13.6m",
+				"percent":"+41% (2019: £53m)",
+				"content":"Lower competition in our markets means there is less upward pressure on salaries, allowing us to offer greater value for money for our clients. \n \n Operating outside of major city centres contributes to reduced property costs, and provides a more sustainable work-life balance for our colleagues.",
+				"footerText":"Profitable growth",
+				"color":"#B86E2E"
+			},
+			{
+				"title":"City quality from a competitive cost base",
+				"subtitle":"Working capital lockup days*",
+				"figure":"85",
+				"percent":"+41% (2019: £53m)",
+				"content":"Fee earners concentrate on client service, while professional managers run the business. Lawyers focus on earning fees with no distractions of running the business, which is operated by an experienced senior leadership team who can act with agility.",
+				"footerText":"Highly cash generative",
+				"color":"#B3A87C"
+			},
+			{
+				"title":"City quality from a competitive cost base",
+				"subtitle":"Fee earner: Non-fee earner ratio",
+				"figure":"4.8:1",
+				"percent":"+41% (2019: £53m)",
+				"content":"Track record of unlocking value from acquisitions, with systems, processes and culture fully integrated by our expert team in under 2 months. \n \n This year we have scaled the business in two existing locations and entered five new locations.",
+				"footerText":"Robust platform for growth",
+				"color":"#8D817B"
+			}
+		]
+	}
+}

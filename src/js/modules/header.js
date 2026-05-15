@@ -6,6 +6,8 @@ const Navigation = (() => {
 	const headerTop = document.querySelector('.js-header__top');
 	const body = document.body;
 
+	const focusableElementsString = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+
 	const getHamburgerIcon = (isOpen, isScrolled) => {
 		if (isOpen) return toggleBtn.dataset.iconOpen;
 		return isScrolled ? toggleBtn.dataset.iconDark : toggleBtn.dataset.iconLight;
@@ -25,10 +27,46 @@ const Navigation = (() => {
 		}
 	};
 
+	const handleTrapFocus = e => {
+		if (e.key !== 'Tab') return;
+
+		const menuFocusables = Array.from(navMenu.querySelectorAll(focusableElementsString));
+
+		const allFocusables = [toggleBtn, ...menuFocusables];
+
+		const firstFocusable = allFocusables[0];
+		const lastFocusable = allFocusables[allFocusables.length - 1];
+
+		if (e.shiftKey) {
+			if (document.activeElement === firstFocusable) {
+				lastFocusable.focus();
+				e.preventDefault();
+			}
+		} else { // Tab
+			if (document.activeElement === lastFocusable) {
+				firstFocusable.focus();
+				e.preventDefault();
+			}
+		}
+	};
+
 	const toggleMenu = isOpen => {
 		navMenu.classList.toggle('is-open', isOpen);
 		headerTop.classList.toggle('is-nav-open', isOpen);
 		body.style.overflow = isOpen ? 'hidden' : '';
+
+		toggleBtn.setAttribute('aria-expanded', isOpen);
+		toggleBtn.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+
+		if (isOpen) {
+			window.addEventListener('keydown', handleTrapFocus);
+
+			setTimeout(() => toggleBtn.focus(), 100);
+		} else {
+			window.removeEventListener('keydown', handleTrapFocus);
+			toggleBtn.focus();
+		}
+
 		updateIcons();
 	};
 
@@ -47,6 +85,12 @@ const Navigation = (() => {
 
 		navMenu.querySelectorAll('.header__nav-link').forEach(link => {
 			link.addEventListener('click', () => toggleMenu(false));
+		});
+
+		window.addEventListener('keydown', e => {
+			if (e.key === 'Escape' && navMenu.classList.contains('is-open')) {
+				toggleMenu(false);
+			}
 		});
 
 		window.addEventListener('scroll', handleScroll);

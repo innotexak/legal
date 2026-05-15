@@ -9,11 +9,11 @@
 	},
 
 	"title":"Annual Report & Acounts",
-	"menu": [
-		{
+		"menu": [
+			{
 			"text": "Introduction",
 			"url": "#introduction",
-			"target": "_self"
+			"target": "_blank"
 		},
 		{
 			"text": "Vission, Mission and Purpose",

@@ -1,0 +1,58 @@
+{
+  "statement": [
+    {
+      "id": "chairman",
+      "tabtitle": "Chairman's statement",
+      "name": "Balbinder ('Bal') Johal",
+      "type": "Non-Executive Chairman",
+      "content": "\u201cLegal\u201d has delivered another strong performance as it grew organically and by acquisition, in line with our strategy to build the leading legal and professional services business outside London.",
+      "subContent": "Having been the first business of our type to corporatise in 2012, “Legal” is a modernised and well-invested legal services business that operates as one team on a common process, data and technology platform.",
+      "downloadText": "Chairman's statement",
+      "downloadIcon": {
+        "src": "assets/images/arrow-down.png",
+        "alternativeText": "Download Icon"
+      },
+      "file": {
+        "name": "Chairman's statement",
+        "size": "1.7mb",
+        "type": "pdf"
+      }
+    },
+    {
+      "id": "ceo",
+      "tabtitle": "CEO's statement",
+      "name": "Balbinder ('Bal') Johal",
+      "type": "Chief Executive Officer",
+      "content": "We delivered a year of strong, profitable, cash generative growth and demonstrated progress in line with our strategy to complement organic growth with carefully targeted acquisitions.",
+      "subContent": "Our investments in operational management, technology and infrastructure, enabled this significant expansion to be executed effectively, with the Group’s staff more than tripling since IPO in June 2018 to over 1,100(or doubling in the last 12 months), and offices expanding from 6 to 13.",
+      "downloadText": "CEO's statement",
+      "downloadIcon": {
+        "src": "assets/images/arrow-down.png",
+        "alternativeText": "Download Icon"
+      },
+      "file": {
+        "name": "CEO's statement",
+        "size": "1.7mb",
+        "type": "pdf"
+      }
+    },
+    {
+      "id": "cfo",
+      "tabtitle": "CFO's statement",
+      "name": "Balbinder ('Bal') Johal",
+      "type": "Chief Financial Officer",
+      "content": "I am pleased to report strong performance for the Group in the financial year.",
+      "subContent": "We have continued to build on our historic strong track record of growth in both turnover and profitability over the past six years with a further 41% increase in turnover and a 45% increase in Underlying Profit Before Tax.",
+      "downloadText": "CFO's statement",
+      "downloadIcon": {
+        "src": "assets/images/arrow-down.png",
+        "alternativeText": "Download Icon"
+      },
+      "file": {
+        "name": "CFO's statement",
+        "size": "1.7mb",
+        "type": "pdf"
+      }
+    }
+  ]
+}

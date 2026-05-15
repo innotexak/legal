@@ -1,0 +1,63 @@
+{
+	"download":{
+		"heading":"Downloads",
+		"fullReport":{
+			"subHeading":"Download full report",
+			"title":"Annual Report and Accounts 2020",
+			"file":{
+				"size":"1.67",
+				"ext":"pdf",
+				"unit":"mb"
+			},
+			"icon":{
+				"src":"assets/images/arrow-down.png",
+				"alternativeText":"download button"
+			}
+		},
+		"chapter":{
+			"subHeading":"Download by chapter",
+			"items":[
+				{
+					"title":"Strategic Report",
+					"file":{
+						"size":"1.67",
+						"ext":"pdf",
+						"unit":"mb"
+					},
+					"icon":{
+						"src":"assets/images/arrow-down.png",
+						"alternativeText":"download button"
+					}
+				},
+				{
+					"title":"Corporate Governance",
+					"file":{
+						"size":"1.67",
+						"ext":"pdf",
+						"unit":"mb"
+					},
+					"icon":{
+						"src":"assets/images/arrow-down.png",
+						"alternativeText":"download button"
+					}
+				},
+				{
+					"title":"Financial Statements",
+					"file":{
+						"size":"1.67",
+						"ext":"pdf",
+						"unit":"mb"
+					},
+					"icon":{
+						"src":"assets/images/arrow-down.png",
+						"alternativeText":"download button"
+					}
+				}
+			]
+		},
+		"image":{
+			"src":"assets/images/book.png",
+			"alternativeText":"download button"
+		}
+	}
+}

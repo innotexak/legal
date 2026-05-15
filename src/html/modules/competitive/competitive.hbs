@@ -1,0 +1,22 @@
+<section class="competitive">
+	<div class="wrap">
+		{{#if competitive}}
+		<div class="competitive__container">
+			<header class="competitive__header">
+				<h2 id="competitive-heading" class="competitive__header-heading">
+				{{competitive.heading}}
+				</h2>
+				<p class="competitive__header-content">{{competitive.content}}</p>
+			</header>
+
+			<div class="competitive__body">
+				{{#if competitive.items}}
+					{{#each competitive.items}}
+						{{> competitive-card item=this index=@index}}
+					{{/each}}
+				{{/if}}
+			</div>
+		</div>
+		{{/if}}
+	</div>
+</section>

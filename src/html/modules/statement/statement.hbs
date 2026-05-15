@@ -1,0 +1,65 @@
+<section class="statement" data-script="statement-tab">
+  <div class="wrap">
+    {{#if statement}}
+    <div class="statement__container">
+
+      <div class="statement__header" role="tablist" aria-label="Client Statements">
+        {{#each statement}}
+          <button
+            class="statement__button js-statement__button {{#if @first}}is-active{{/if}}"
+            data-tab="{{this.id}}"
+            id="tab-{{this.id}}"
+            role="tab"
+            aria-selected="{{#if @first}}true{{else}}false{{/if}}"
+            aria-controls="panel-{{this.id}}"
+            tabindex="{{#if @first}}0{{else}}-1{{/if}}"
+            type="button"
+          >
+            {{this.tabtitle}}
+          </button>
+        {{/each}}
+      </div>
+
+      <div class="statement__body">
+        <div class="statement__empty js-statement__empty"></div>
+
+        <div class="statement__panels">
+          {{#each statement}}
+            <div
+              id="panel-{{this.id}}"
+              class="statement__panel js-statement__panel {{#if @first}}is-active{{/if}}"
+              data-content="{{this.id}}"
+              role="tabpanel"
+              aria-labelledby="tab-{{this.id}}"
+              tabindex="0"
+            >
+              <p class="statement__quote">{{this.content}}</p>
+
+              <h1 class="statement__name">{{this.name}}</h1>
+              <p class="statement__type">{{this.type}}</p>
+
+              <p class="statement__subcontent">{{this.subContent}}</p>
+
+              <a class="statement__download" href="#" aria-label="Download {{this.file.name}} {{this.file.type}}, {{this.file.size}}" download>
+                <img
+                  src="{{this.downloadIcon.src}}"
+                  alt=""
+                  aria-hidden="true"
+                  class="statement__download-image"
+                />
+                <p class="statement__download-text">
+                  {{this.file.name}}
+                  <span>
+                    <strong>{{this.file.type}}</strong> 
+                    {{this.file.size}}
+                  </span>
+                </p>
+              </a>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+    {{/if}}
+  </div>
+</section>

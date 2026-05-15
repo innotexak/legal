@@ -1,0 +1,34 @@
+<article class="investment-card" aria-labelledby="card-title-{{@index}}"  style="--card-color: {{item.color}}">
+    {{#if item}}
+    <div class="investment-card__container">
+
+      <header class="card__header">
+        <h2 id="card-title-{{@index}}" class="card__title">
+          {{item.title}}
+        </h2>
+      </header>
+
+      <div class="card__body">
+        <p class="card__subtitle">{{item.subtitle}}</p>
+
+        <p class="card__figure">
+          {{item.figure}}
+        </p>
+		  <p class="card__percent">
+          {{item.percent}}
+        </p>
+
+		
+
+        <p class="card__content">{{{formatText item.content}}}</p>
+      </div>
+
+      <footer class="card__footer">
+        <p class="card__footer-text">
+          {{item.footerText}}
+        </p>
+      </footer>
+
+    </div>
+    {{/if}}
+</article>

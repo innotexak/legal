@@ -30,6 +30,7 @@
             height: 147px;       
             width: 100%;         
             border-bottom: none; 
+
             &:last-child {
                 border-bottom: 2px solid $white;
             }
@@ -52,7 +53,6 @@
                 height: 100%; 
                 padding: 10px;
             }
-
         }
 
         &-body {
@@ -140,44 +140,42 @@
     }
 }
 
+.row-one, .row-two {
+    height: 2px;
+    width: 54%;
+     background-color: $white;
+    position: absolute;
+    bottom: -1px;
+    border: 1px solid $white;
 
+    @include media-breakpoint-down(sm) {
+        width: 95%;      
+        right: 0;     
+        left: auto;       
+        bottom: auto;   
+        }
+    }
 
-            .row-one, .row-two {
-                height: 2px;
-                width: 54%;
-                background-color: $white;
-                position: absolute;
-                bottom: -1px;
-                border: 1px solid $white;
+.row-one {
+    left: -5px;
+    transform: rotate(20deg);
+    transform-origin:none right;
 
-                @include media-breakpoint-down(sm) {
-                   width: 95%;      
-                    right: 0;     
-                    left: auto;       
-                    bottom: auto;   
-                }
-            }
+    @include media-breakpoint-down(sm) {
+        top: 50%;
+        transform: rotate(-75deg);
+        transform-origin: right center;
+    }
+}
 
-            .row-one {
-                left: -5px;
-                transform: rotate(20deg);
-                transform-origin:none right;
+.row-two {
+    right: -5px;
+    transform: rotate(-20deg);
+    transform-origin: none left;
 
-                @include media-breakpoint-down(sm) {
-                    top: 50%;
-                    transform: rotate(-75deg);
-                    transform-origin: right center;
-                }
-            }
-
-            .row-two {
-                right: -5px;
-                transform: rotate(-20deg);
-                transform-origin: none left;
-
-                @include media-breakpoint-down(sm) {
-                     top: 50%;
-                    transform: rotate(75deg);
-                    transform-origin: right center;
-                }
-            }
+    @include media-breakpoint-down(sm) {
+        top: 50%;
+        transform: rotate(75deg);
+        transform-origin: right center;
+    }
+}

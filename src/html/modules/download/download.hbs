@@ -1,0 +1,50 @@
+<section class="download">
+	<div class="wrap">
+		{{#if download}}
+		<div class="download__container">
+			<div class="download__content">
+				<h1 class="download__heading">{{download.heading}}</h1>
+				{{#if download.fullReport}}
+				<h2 class="download__subheading">{{download.fullReport.subHeading}}</h2>
+					<div class="download__card">
+						<div class="download__card-body">
+						<img src="{{download.fullReport.icon.src}}" alt="{{download.fullReport.icon.alternativeText}}">
+						<p class="download__card-text">
+							<span>{{download.fullReport.title}}</span>
+							<strong class="faint-text">
+								<span class="uppercase">{{download.fullReport.file.ext}}</span>{{download.fullReport.file.size}}{{download.fullReport.file.unit}}
+							</strong>
+						</p>
+					</div>
+					</div>
+				{{/if}}
+
+
+				{{#if download.chapter}}
+				<h3 class="download__subheading">{{download.chapter.subHeading}}</h3>
+					<ul class="content__list">
+						
+						{{#each download.chapter.items}}
+						<li class="download__card">
+							<div class="download__card-body">
+								<img src="{{../download.fullReport.icon.src}}" alt="{{../download.fullReport.icon.alternativeText}}">
+								<p class="download__card-text">
+									<span>{{this.title}}</span>
+									<strong class="faint-text"> <span class="uppercase">{{this.file.ext}}</span>{{this.file.size}}{{this.file.unit}}</strong>
+								</p>
+							</div>
+						</li>
+						{{/each}}
+					</ul>
+				{{/if}}
+			</div>
+			{{#if download.image}}
+			<div class="download__media">
+				<img src="{{download.image.src}}" alt="{{download.image.alternativeText}}" class="media-image">
+			</div>
+			{{/if}}
+		</div>
+		{{/if}}
+
+	</div>
+</section>

@@ -1,0 +1,66 @@
+<section class="business" aria-labelledby="business-heading">
+  <div class="wrap">
+    {{#if business}}
+    <div class="business__container">
+
+      <header class="business__header">
+        <h2 id="business-heading" class="business__header-heading">
+          {{business.heading}}
+        </h2>
+        <p class="business__header-content">{{business.content}}</p>
+      </header>
+
+  	<div class="business__body">
+		<ol class="business__list">
+			{{#each business.items}}
+			<li class="business__item">
+				<div class="business__item-inner">
+
+					<figure class="business__media">
+						<img
+							src="{{this.image.src}}"
+							alt="{{this.image.alternativeText}}"
+							class="business__icon"
+						>
+					</figure>
+
+					<div class="business__content">
+
+						<p class="business__serialnumber" aria-hidden="true">
+							{{increment @index}}
+						</p>
+
+						<p class="business__text">
+							{{{formatText this.text}}}
+						</p>
+
+					</div>
+
+				</div>
+			</li>
+			{{/each}}
+		</ol>
+	</div>
+
+    <footer class="statement__download">
+        <img
+            src="{{business.downloadIcon.src}}"
+          	alt="{{business.downloadIcon.alternativeText}}"
+			class="business__download-image"
+		/>
+        <p class="business__download-text">
+          	{{business.file.name}}
+				<span>
+					<strong>
+						{{business.file.type}}
+					
+					</strong> 
+					{{business.file.size}}
+				</span>
+            </p>
+    </footer>
+
+    </div>
+    {{/if}}
+  </div>
+</section>

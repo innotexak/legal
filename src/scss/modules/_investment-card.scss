@@ -1,0 +1,155 @@
+// ---------- @{module}
+// ------------------------------------------------------------------------------
+
+@use "../abstracts" as *;
+
+.investment-card {
+	width: 100%;
+	min-width: 224px;
+	background-color: $white;
+
+	&__container{
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+
+		@include media-breakpoint-down(sm){
+			max-width: 370px;
+		}
+	}
+
+	.card{
+
+		&__header{
+			padding:20px 15px;
+			margin:20px 15px;
+			border-bottom:1px solid var(--card-color);
+
+			@include media-breakpoint-down(md){
+				margin:10px;
+				padding:10px;
+			}
+		}
+
+		&__title{
+			color:var(--card-color);
+			font-weight: 400;
+			font-size: 23px;
+			line-height: 30px;
+			letter-spacing: 0%;
+
+			@include media-breakpoint-down(md){
+				font-size: 18px;
+				line-height: 26px;
+			
+			}
+		}
+
+		&__subtitle{
+			font-weight: 700;
+			font-size: 14px;
+			line-height: 20px;
+			letter-spacing: 0;
+			color:rgba($black, 0.7);
+			padding:20px;
+
+			@include media-breakpoint-down(md){
+				font-size: 11px;
+				line-height: 20px;
+				padding:20px;
+
+			}
+		}
+
+		&__figure{
+			font-weight: 700;
+			font-size: 54px;
+			line-height: 52px;
+			letter-spacing: 0;
+			color: var(--card-color);
+			padding:20px;
+
+			@include media-breakpoint-down(md){
+				font-size: 40px;
+				padding: 0 20px;
+			}
+		}
+
+		&__percent{
+			color: $grey;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 100%;
+			letter-spacing: 0;
+			padding:5px 20px;
+
+			@include media-breakpoint-down(md){
+				font-size: 16px;
+				padding:5px 20px;
+			}
+
+
+		}
+
+		&__content{
+			height: 200px;
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 22px;
+			letter-spacing: 0%;
+			padding:10px 20px;
+			color:$grey;
+
+			@include media-breakpoint-down(md){
+				font-size: 12px;
+				line-height: 18px;
+				height: 250px;
+			}
+
+
+		}
+
+		&__footer {
+		width: 100%;
+		min-height: 130px; 
+		background-color: var(--card-color);
+		color: $white;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		clip-path: polygon(
+			0% 20px,        
+			50% 40px,        
+			100% 20px,      
+			100% calc(100% - 20px), 
+			50% 100%,      
+			0% calc(100% - 20px)  
+		);
+	}
+
+
+	&__footer-text {
+			font-size: 18px;
+			font-weight: 700;
+			text-align: center;
+			padding: 0;
+			margin-top:10px;
+			letter-spacing: 0%;
+			line-height:100%;
+
+			@include media-breakpoint-down(md){
+				font-size: 16px;
+				padding:20px;
+			}
+		}
+
+
+
+	}
+
+	&__body{
+		display: block;;
+	}
+
+
+}
