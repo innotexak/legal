@@ -46,6 +46,11 @@
 				"src":"assets/images/people.png",
 				"alternativeText":"People picture"
 			}
+		},
+
+		"arrowIcon":{
+			"src":"assets/images/side-arrow.png",
+			"alternativeText":"Side arrow"
 		}
 		
 	}

@@ -35,7 +35,18 @@
 	}
 
 
+	&__home {
+		padding:10px;
+		border-radius: 7px;
 
+		&:focus-visible {
+			outline: 2px solid $white;
+    		outline-offset: 2px;
+    		box-shadow: 0 0 0 2px $gold;
+   	 		border-radius: 2px;
+		}
+	}
+	
 	&__logo {
 		width: 192.4px;
 		height: 42.5px;
@@ -48,6 +59,7 @@
 
 	&__hamburger {
 		cursor: pointer;
+		padding:10px;
 
 		img {
 			width: 30px;
@@ -57,6 +69,13 @@
 				width: 20px;
 				height: 20px;
 			}
+		}
+
+		&:focus-visible {
+			outline: 2px solid $white;
+    		outline-offset: 2px;
+    		box-shadow: 0 0 0 2px $gold;
+   	 		border-radius: 2px;
 		}
 	}
 
@@ -156,8 +175,10 @@
 			font-weight: 400;
 			font-style: regular;
 			padding: 10px 0;
+			margin: 7px 0;		
 			font-size: 26px;
 			letter-spacing: 0%;
+			border: none		;
 
 			@include media-breakpoint-only(md) {
 				font-size: 20px;
@@ -169,6 +190,8 @@
 				font-size: 16px;
 				line-height: 100%;
 			}
+			
+		
 		}
 
 		&-link {
@@ -180,6 +203,14 @@
 
 			&:active{
 				background-color: $dark-gold;
+			}
+
+			
+			&:focus-visible {
+				outline: 2px solid $white;
+				outline-offset: 2px;
+				box-shadow: 0 0 0 2px $gold;
+				border-radius: 2px;
 			}
 		}
 

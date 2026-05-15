@@ -1,72 +1,78 @@
 <header class="header" data-script="header">
-	<div class="wrap">
-		<div class="header__container">
-			<div class="header__top js-header__top">
-				{{#if logo}}
-				<a hr	ef="/" class="header__home">
-					<img 
-					class="header__logo js-header__logo" 
-					src="{{logo.src}}" 
-					alt="{{logo.alternateText}}"
-					data-logo-light="{{logo.src}}"
-					data-logo-dark="{{logo.light.src}}">
-				</a>	
-				{{/if}}
-				
-				<span class="header__title">{{title}}</span>
-				
-				{{#if hamburger}}
-				<button 
-					class="header__hamburger js-hamburger-toggle"
-					aria-label="Toggle navigation menu"
-					aria-expanded="false"
-					data-icon-light="{{hamburger.src}}"
-					data-icon-dark="{{hamburger.light.src}}"
-					data-icon-open="{{hamburger.open.src}}">
-					<img 
-					class="js-hamburger-icon" 
-					src="{{hamburger.light.src}}" 
-					alt="{{hamburger.alternateText}}"
-					aria-hidden="true"
-					>
-				</button>
-				{{/if}}
-			</div>
+    <div class="wrap">
+        <div class="header__container">
+            <div class="header__top js-header__top">
+                {{#if logo}}
+                <a href="/" class="header__home" aria-label="Legal PLC Home">
+                    <img 
+                        class="header__logo js-header__logo" 
+                        src="{{logo.src}}" 
+                        alt="" 
+                        aria-hidden="true"
+                        data-logo-light="{{logo.src}}"
+                        data-logo-dark="{{logo.light.src}}">
+                </a>    
+                {{/if}}
+                
+                <span class="header__title" aria-level="2" role="heading">{{title}}</span>
+                
+                {{#if hamburger}}
+                <button 
+                    class="header__hamburger js-hamburger-toggle"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="main-navigation" 
+                    data-icon-light="{{hamburger.src}}"
+                    data-icon-dark="{{hamburger.light.src}}"
+                    data-icon-open="{{hamburger.open.src}}">
+                    <img 
+                        class="js-hamburger-icon" 
+                        src="{{hamburger.light.src}}" 
+                        alt="" 
+                        aria-hidden="true">
+                </button>
+                {{/if}}
+            </div>
 
-			<div class="header__left">
-				{{#if report}}
-				<div class="header__content">
-					<p class="header__content-subtitle" aria-label="{{report.subtitle}}">{{report.subtitle}}</p>
-					<span class="header__content-stroke"></span>
-					<h1 class="header__content-maintitle">{{{formatText report.maintitle}}}</h1>
-					<p class="header__content-text">{{report.content}}</p>
-				</div>
-				{{/if}}
-			</div>
-		</div>
-	</div>
+            <div class="header__left">
+                {{#if report}}
+                <div class="header__content">
+                    <p class="header__content-subtitle">{{report.subtitle}}</p>
+                    <span class="header__content-stroke" aria-hidden="true"></span>
+                    <h1 class="header__content-maintitle">{{{formatText report.maintitle}}}</h1>
+                    <p class="header__content-text">{{report.content}}</p>
+                </div>
+                {{/if}}
+            </div>
+        </div>
+    </div>      
 
-	{{#if menu}}
-	<nav 
-		id="main-navigation"
-		class="header__nav-close js-header__nav-close"
-		aria-label="Main menu"
-	>
-		<div class="wrap">
-			<ul class="header__nav-list" role="menubar">
-				{{#each menu}}
-				<li class="header__nav-item" role="menuitem">
-					<a 
-					class="header__nav-link" 
-					href="{{this.url}}"{{#ifContains this.target "_blank"}} 
-					target="_blank"
-					 rel="noopener noreferrer"{{/ifContains}}>{{this.text}}</a>
-				</li>
-				{{/each}}
-			</ul>
-		</div>	
-	</nav>
-	{{/if}}
+    {{#if menu}}
+    <nav 
+        id="main-navigation"
+        class="header__nav-close js-header__nav-close"
+        aria-label="Main"
+    >
+        <div class="wrap">
+            <ul class="header__nav-list">
+                {{#each menu}}
+                <li class="header__nav-item"	>
+                    <a 
+                        class="header__nav-link" 
+                        href="{{this.url}}"
+                        {{#ifContains this.target "_blank"}} 
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="{{this.text}} (opens in a new tab)"
+                        {{/ifContains}}>
+                        {{this.text}}
+                    </a>
+                </li>
+                {{/each}}
+            </ul>
+        </div>  
+    </nav>
+    {{/if}}
 
-	<div class="header__ball" aria-hidden="true"></div>
+    <div class="header__ball" aria-hidden="true"></div>
 </header>

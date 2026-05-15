@@ -2,10 +2,9 @@
 	<div class="wrap">
 		{{#if financial}}
 		<div class="financial__container">
-
 			<div class="financial__left">
 				<div class="financial__left-top">
-					<h2 class="financial__top-heading">
+					<h2 class="financial__top-heading" id="financial-heading">
 						{{financial.heading}}
 					</h2>
 
@@ -34,6 +33,8 @@
 							data-count="{{this.figure.value}}"
 							data-prefix="{{this.figure.prefix}}"
 							data-suffix="{{this.figure.suffix}}"
+							aria-live="polite"
+                            aria-atomic="true"
 							>
 							0
 							</dd>

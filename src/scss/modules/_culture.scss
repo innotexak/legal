@@ -5,15 +5,24 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+	position:relative;
+	
+
+	@include media-breakpoint-down(sm) {
+		padding:0 10px;
+		.wrap{
+			padding:0;
+		}
+	}
 
 	&__tab {
 		width: 100%;
 		position: sticky;
 		top: 0;
-		z-index: 100;
+		z-index: 6;
 
 		&-list {
-			width: 80%;
+			width: 100%;
 			list-style: none;
 			margin: 0;
 			display: flex;
@@ -33,10 +42,14 @@
 				transform: translateX(var(--tab-indicator-left, 0));
 				transition: width 0.35s $ease-out-expo, transform 0.35s $ease-out-expo;
 			}
+		
 		}
 
 		&-item {
+			width: 100%;
 			display: flex;
+			color:inherit
+
 		}
 
 		&-link {
@@ -44,8 +57,10 @@
 			display: flex;
 			align-items: center;
 			padding: 0 28px;
-			font-size: 13px;
 			font-weight: 500;
+			font-size: 30px;
+			line-height: 34px;
+			margin:0 20px;
 			letter-spacing: 0.1em;
 			text-transform: uppercase;
 			text-decoration: none;
@@ -60,7 +75,7 @@
 			}
 
 			&.is-active {
-				color: $color-ink;
+				color: $gold
 			}
 
 			@include media-breakpoint-down(sm) {
@@ -117,9 +132,11 @@
 	}
 
 	&__media {
-		width: 45%;
-		height: 100%;
 		z-index: 2;
+		height: 100%;
+		width: 100%;
+		max-width: 570px;
+		max-height: 573px;
 
 		.media-image {
 			width: 100%;
@@ -128,9 +145,8 @@
 			display: block;
 		}
 	}
+
 }
-
-
 .clients {
 
 	&__container {
@@ -144,16 +160,20 @@
 	}
 
 	&__content {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		gap: 32px;
 
+		>* {
+			flex: 1;
+		}
+
 		@include media-breakpoint-down(sm) {
-			grid-template-columns: 1fr;
+			flex-direction: column;
 		}
 
 		&-card {
-			border: 1px solid $color-line;
 			border-radius: 4px;
 			padding: 40px 36px;
 			display: flex;
@@ -162,17 +182,6 @@
 			transition: box-shadow 0.25s $ease-in-out, transform 0.25s $ease-in-out;
 			position: relative;
 
-			&::before {
-				content: '\201C';
-				font-size: 80px;
-				line-height: 0.8;
-				color: rgba($color-accent, 0.15);
-				position: absolute;
-				top: 24px;
-				right: 28px;
-				user-select: none;
-			}
-
 			&:hover {
 				transform: translateY(-4px);
 				box-shadow: 0 12px 40px rgba($color-ink, 0.09);
@@ -180,11 +189,10 @@
 		}
 
 		&-quote {
-			width: 48px;
-			height: 48px;
-			border-radius: 50%;
-			object-fit: cover;
-			border: 2px solid $color-line;
+			width: 30px;
+			height: 30px;
+			object-fit: contain;
+
 		}
 
 		&-text {
@@ -221,8 +229,16 @@
 		gap: 80px;
 		animation: panel-fade-in 0.45s $ease-out-expo both;
 
+		>* {
+			flex: 1;
+		}
+
+
 		&.is-active {
 			display: flex;
+			justify-content: space-between;
+			align-items: center
+	;
 		}
 
 		@include media-breakpoint-down(md) {
@@ -234,7 +250,7 @@
 
 	&__media {
 		flex: 0 0 420px;
-		height: 520px;
+		height: 100%;
 		overflow: hidden;
 		border-radius: 4px;
 
@@ -263,21 +279,12 @@
 	}
 
 	&__subheading {
-		font-size: clamp(1.75rem, 3vw, 2.75rem);
-		font-weight: 400;
-		line-height: 1.2;
 		color: $color-ink;
 		margin: 0 0 24px;
-		letter-spacing: -0.01em;
-
-		&::after {
-			content: '';
-			display: block;
-			width: 40px;
-			height: 2px;
-			background: $color-accent;
-			margin-top: 18px;
-		}
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 28px;
+		letter-spacing: 0%;
 	}
 
 	&__text {
@@ -297,5 +304,25 @@
 	to {
 		opacity: 1;
 		transform: translateY(0);
+	}
+}
+
+.side-arrow{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 60px;
+	height: 100%;
+	z-index:99;
+
+	@include media-breakpoint-down(md) {
+		display: none;
+		visibility: hidden;
+	}
+
+	&__image{
+		width: 100%;
+		height: 100%;
+		object-fit: stretch;
 	}
 }
