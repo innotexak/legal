@@ -1,4 +1,4 @@
-<section class="business" aria-labelledby="business-heading">
+<section class="business" aria-labelledby="business-heading" id="business">
   <div class="wrap">
     {{#if business}}
     <div class="business__container">
@@ -42,23 +42,23 @@
 		</ol>
 	</div>
 
-    <footer class="statement__download">
+    <a class="statement__download" href="{{business.file.url}}" target="_blank" rel="noopener noreferrer">
         <img
             src="{{business.downloadIcon.src}}"
-          	alt="{{business.downloadIcon.alternativeText}}"
+          	alt=""
 			class="business__download-image"
 		/>
         <p class="business__download-text">
           	{{business.file.name}}
-				<span>
-					<strong>
-						{{business.file.type}}
-					
-					</strong> 
-					{{business.file.size}}
-				</span>
-            </p>
-    </footer>
+			<span>
+				<strong>
+					{{business.file.type}}
+				
+				</strong> 
+				{{business.file.size}}
+			</span>
+        </p>
+    </a>
 
     </div>
     {{/if}}

@@ -1,6 +1,10 @@
 {
 	"footer":{
 		"copy":"© “Legal”",
+		"upIcon":{
+			"src":"assets/images/arrow-right.png",
+			"alternativeText":"up arrow"
+		},
 		"menus":[
 			{
 				"link":"sitemap",

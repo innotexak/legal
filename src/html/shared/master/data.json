@@ -2,9 +2,9 @@
     "cookieCivic": false,
     "pageTitle": "Front-end HBS Starter",
     "seo": {
-        "seoTitle": "Seo Title",
-        "seoDescription": "",
-        "seoKeywords": "",
+        "seoTitle": "Legal - Home",
+        "seoDescription": "A legal page description",
+        "seoKeywords": "law, legal, lawyer, advocate, attorney",
         "canonicalLink": "http://umbraco9-test.local/",
         "alternateLanguageLinks": [],
         "hideFromSearchEngines": false
@@ -21,7 +21,7 @@
         },
         "canonicalUrl": "http://umbraco9-test.local/",
         "locale": "en-US",
-        "siteName": "Site name"
+        "siteName": "LegalPlc"
     },      
 	"googleTagManagerSript": false,
 	"googleTagManagerNoSript": false
