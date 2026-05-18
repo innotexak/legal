@@ -1,36 +1,61 @@
-<footer class="footer">
+<footer class="footer" aria-labelledby="site-footer">
 	<div class="wrap">
 		{{#if footer}}
-		<div class="footer__container">
+			<div class="footer__container" id="site-footer">
 				<div class="footer__legal">
 					<span class="footer__copy">
 						{{footer.copy}}
 					</span>
 				</div>
-			<ul class="footer__menu">
-				{{#if footer.menus}}
-				{{#each footer.menus}}
-					<li class="footer__menu-list">
-						<a class="footer__menu-link" href="{{this.src}}"><span>|</span>{{this.label}}</a>
-					</li>
-					
-				{{/each}}
-				{{/if}}
-			</ul>
+				<ul class="footer__menu">
+					{{#if footer.menus}}
+						{{#each footer.menus}}
+							<li class="footer__menu-list">
+								<a class="footer__menu-link" href="{{this.src}}">
+									<span>|</span>
+									{{this.label}}
+								</a>
+							</li>
+						{{/each}}
+					{{/if}}
+				</ul>
 
-			<div class="footer__company">	
-				{{#if footer.company}}
-					<span class="footer__company-text">{{footer.company}}</span>
-				{{/if}}
+				<div class="footer__company">	
+					{{#if footer.company}}
+						<a 
+							class="footer__company-text" 
+							href="{{footer.company}}" 
+							target="_blank" 
+							aria-label="Designed {{footer.company}} (opens in a new tab)" 
+							rel="noopener noreferrer">
+							{{footer.company}}
+						</a>
+					{{/if}}
 
-				{{#if footer.socials}}
-				{{#each footer.socials}}
-					<img src="{{this.src}}" alt="{{this.alternativeText}}" class="footer__social-image"/>
-				{{/each}}
-				{{/if}}
+					{{#if footer.socials}}
+						{{#each footer.socials}}
+							<a 
+								href="{{this.src}}" 
+								target="_blank" 
+								rel="noopener noreferrer" 
+								aria-label="{{this.label}} (opens in a new tab)" 
+								class="footer__social">
+								<img src="{{this.src}}" alt="" aria-hidden="true" class="footer__social-image"/>
+							</a>
+						{{/each}}
+					{{/if}}
 
+				</div>
+
+				<div class="footer__up">
+					<a href="#" class="footer__up-link" aria-label="Back to top">
+						<img src="{{footer.upIcon.src}}" alt="" aria-hidden="true" class="footer__up-image"/>
+					</a>
+				</div>
 			</div>
-		</div>
 		{{/if}}
+
+	
 	</div>
+	
 </footer>

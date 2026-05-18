@@ -33,13 +33,17 @@ const cultureTabs = (() => {
 			const active = panel.dataset.content === tabId;
 			panel.classList.toggle('is-active', active);
 
+			// FIXED: Explicitly tell screen readers to ignore inactive panels
+			panel.setAttribute('aria-hidden', String(!active));
+
 			if (active) {
 				panel.style.animation = 'none';
 				void panel.offsetHeight;
 				panel.style.animation = '';
 			}
-
 		});
+
+		// ... (rest of your background image swapping logic stays exactly the same)
 		if (tabId === 'culture') {
 			section.style.backgroundImage = 'url(' + section.dataset.bgImage + ')';
 			section.style.backgroundSize = 'cover';

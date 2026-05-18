@@ -1,6 +1,10 @@
 {
 	"footer":{
 		"copy":"© “Legal”",
+		"upIcon":{
+			"src":"assets/images/arrow-right.png",
+			"alternativeText":"up arrow"
+		},
 		"menus":[
 			{
 				"link":"sitemap",
@@ -42,7 +46,8 @@
 		"socials":[
 			{
 				"src":"assets/images/linkedin.png",
-				"alternativeText":"linkedin"
+				"alternativeText":"linkedin",
+				"label":"LinkedIn"
 			}
 		]
 	}

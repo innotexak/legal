@@ -1,16 +1,21 @@
-<section class="investment">
+<section class="investment" aria-labelledby="investment-heading" id="investment">
 	<div class="wrap">
 		{{#if investment}}
 		<div class="investment__container">
 			{{#if investment.heading}}
 			<div class="investment__header">
-				<h1 class="investment__heading">{{investment.heading.main}}</h1>
+				<h1 class="investment__heading" id="investment-heading">{{investment.heading.main}}</h1>
 				<p class="investment__subheading">{{investment.heading.sub}}</p>
 			</div>
 			{{/if}}
 
 			<p class="investment__description">{{investment.description}}</p>
-			<div class="investment__body">
+			<div 
+				class="investment__body" 
+				tabindex="0" 
+                role="region" 	
+                aria-label="{{investment.heading.main}} list"
+			>
 				{{#if investment.items}}
 					{{#each investment.items}}
 						{{> investment-card item=this}}

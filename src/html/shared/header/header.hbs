@@ -1,37 +1,39 @@
-<header class="header" data-script="header">
+<header class="header" data-script="header" id="introduction">
     <div class="wrap">
         <div class="header__container">
             <div class="header__top js-header__top">
-                {{#if logo}}
-                <a href="/" class="header__home" aria-label="Legal PLC Home">
-                    <img 
-                        class="header__logo js-header__logo" 
-                        src="{{logo.src}}" 
-                        alt="" 
-                        aria-hidden="true"
-                        data-logo-light="{{logo.src}}"
-                        data-logo-dark="{{logo.light.src}}">
-                </a>    
-                {{/if}}
+                <div class="header__top-inner">
+                    {{#if logo}}
+                        <a href="/" class="header__home" aria-label="Legal PLC Home">
+                            <img 
+                                class="header__logo js-header__logo" 
+                                src="{{logo.src}}" 
+                                alt="" 
+                                aria-hidden="true"
+                                data-logo-light="{{logo.src}}"
+                                data-logo-dark="{{logo.light.src}}">
+                        </a>    
+                    {{/if}}
                 
-                <span class="header__title" aria-level="2" role="heading">{{title}}</span>
+                    <span class="header__title" aria-level="2" role="heading">{{title}}</span>
                 
-                {{#if hamburger}}
-                <button 
-                    class="header__hamburger js-hamburger-toggle"
-                    aria-label="Open navigation menu"
-                    aria-expanded="false"
-                    aria-controls="main-navigation" 
-                    data-icon-light="{{hamburger.src}}"
-                    data-icon-dark="{{hamburger.light.src}}"
-                    data-icon-open="{{hamburger.open.src}}">
-                    <img 
-                        class="js-hamburger-icon" 
-                        src="{{hamburger.light.src}}" 
-                        alt="" 
-                        aria-hidden="true">
-                </button>
-                {{/if}}
+                    {{#if hamburger}}
+                        <button 
+                            class="header__hamburger js-hamburger-toggle"
+                            aria-label="Open navigation menu"
+                            aria-expanded="false"
+                            aria-controls="main-navigation" 
+                            data-icon-light="{{hamburger.src}}"
+                            data-icon-dark="{{hamburger.light.src}}"
+                            data-icon-open="{{hamburger.open.src}}">
+                            <img 
+                                class="js-hamburger-icon" 
+                                src="{{hamburger.light.src}}" 
+                                alt="" 
+                                aria-hidden="true">
+                        </button>
+                    {{/if}}
+                </div>
             </div>
 
             <div class="header__left">

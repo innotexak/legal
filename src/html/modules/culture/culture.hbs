@@ -1,22 +1,41 @@
-<section class="culture" data-script="culture" data-bg-image="{{data.culture.bgImage.src}}">  
+<section class="culture" data-script="culture" data-bg-image="{{data.culture.bgImage.src}}" id="culture">  
 	<div class="wrap">
     {{#if data.culture}}
 
     <nav class="culture__tab">
       <ul class="culture__tab-list js-culture__tab-list">
-        <li class="culture__tab-item">
-          <a href="#culture" data-tab="culture" class="culture__tab-link js-culture__tab-link">{{data.culture.tabtitle}}</a>
+        <li class="culture__tab-item" role="presentation">
+          <a 
+            href="#culture" data-tab="culture" 
+            id="tab-culture" class="culture__tab-link js-culture__tab-link" 
+            aria-controls="panel-culture">
+            {{data.culture.tabtitle}}
+            </a>
         </li>
-        <li class="culture__tab-item">
-          <a href="#clients" data-tab="clients" class="culture__tab-link js-culture__tab-link">{{data.clients.tabtitle}}</a>
+        <li class="culture__tab-item" role="presentation">
+          <a 
+            href="#clients" data-tab="clients" 
+            id="tab-clients" class="culture__tab-link js-culture__tab-link" 
+            aria-controls="panel-clients">
+            {{data.clients.tabtitle}}
+            </a>
         </li>
-        <li class="culture__tab-item">
-          <a href="#people" data-tab="people" class="culture__tab-link js-culture__tab-link">{{data.people.tabtitle}}</a>
+        <li class="culture__tab-item" role="presentation">
+          <a 
+            href="#people" data-tab="people" 
+            id="tab-people" class="culture__tab-link js-culture__tab-link" 
+            aria-controls="panel-people">
+            {{data.people.tabtitle}}
+          </a>
         </li>
       </ul>
     </nav>
 
-    <div class="culture__container js-culture__panel" data-content="culture">
+    <div 
+      class="culture__container js-culture__panel" 
+      data-content="culture"
+      id="panel-culture"
+    >
       <div class="culture__content">
         {{#if data.culture.heading}}
         <h2 class="culture__subheading">{{data.culture.heading}}</h2>
@@ -29,14 +48,14 @@
       {{/if}}
     </div>
 
-    <div class="clients__container js-culture__panel" data-content="clients">
+    <div class="clients__container js-culture__panel" data-content="clients" id="panel-clients">
       {{#if data.clients}}
       <div class="clients__content">
         {{#if data.clients.content}}
         {{#each data.clients.content}}
-          <div class="clients__content-card">
-            <img src="{{this.image.src}}" alt="{{this.image.alternativeText}}" class="clients__content-quote">
-            <p class="clients__content-text">{{this.text}}</p>
+          <div class="clients__content-card" >
+            <img src="{{this.image.src}}" alt="" aria-hidden="true" class="clients__content-quote">
+            <p class="clients__content-text" >{{this.text}}</p>
             <strong class="clients__content-name">{{this.name}}</strong>
             <span class="clients__content-position">{{this.position}}</span>
           </div>
@@ -46,7 +65,11 @@
       {{/if}}
     </div>
 
-    <div class="people__container js-culture__panel" data-content="people">
+    <div 
+      class="people__container js-culture__panel" 
+      data-content="people" 
+      id="panel-people"
+      >
       {{#if data.people.image}}
       <div class="people__media">
         <img src="{{data.people.image.src}}" alt="{{data.people.image.alternativeText}}" class="media-image">
