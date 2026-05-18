@@ -39,8 +39,6 @@ const statement = (() => {
 			btn.classList.toggle('is-active', active);
 			btn.setAttribute('aria-selected', String(active));
 
-			// CRITICAL: Only the active button can be "tabbed" to.
-			// Inactive ones are reached via Arrow Keys.
 			btn.setAttribute('tabindex', active ? '0' : '-1');
 		});
 
@@ -48,7 +46,6 @@ const statement = (() => {
 			const active = panel.dataset.content === tabId;
 			panel.classList.toggle('is-active', active);
 
-			// Allows user to Tab into the content area to read it
 			panel.setAttribute('tabindex', active ? '0' : '-1');
 
 			if (active) {
@@ -69,7 +66,6 @@ const statement = (() => {
 		}
 	}
 
-	// --- NEW: Handle Arrow Key movement between titles ---
 	function handleKeyboardNav(e, section, buttons, currentIndex) {
 		let nextIndex;
 
@@ -78,14 +74,14 @@ const statement = (() => {
 		} else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
 			nextIndex = (currentIndex - 1 + buttons.length) % buttons.length;
 		} else {
-			return; // Ignore other keys
+			return;
 		}
 
-		e.preventDefault(); // Stop page from scrolling
+		e.preventDefault();
 		const nextBtn = buttons[nextIndex];
 
 		activateTab(section, nextBtn.dataset.tab);
-		nextBtn.focus(); // Move focus to the next title
+		nextBtn.focus();
 	}
 
 	function init() {
@@ -96,10 +92,8 @@ const statement = (() => {
 			if (!buttons.length) return;
 
 			buttons.forEach((btn, index) => {
-				// Click interaction
 				btn.addEventListener('click', () => activateTab(section, btn.dataset.tab));
 
-				// Keyboard interaction (Arrow Keys to move titles)
 				btn.addEventListener('keydown', e => handleKeyboardNav(e, section, buttons, index));
 			});
 

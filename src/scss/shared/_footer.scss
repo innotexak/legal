@@ -51,6 +51,13 @@
 				color:rgba($light-grey,0.5);
 				padding:2.5px;
 			}
+
+			&:focus-visible {
+				outline: 2px solid $white;
+	 			outline-offset: 2px;
+				box-shadow: 0 0 0 2px $black;
+				border-radius: 2px;
+			}
 		}
 
 
@@ -72,10 +79,23 @@
 			align-items: flex-start;
 			flex-direction: column;
 		}
+
+		&:focus-visible {
+			outline: 2px solid $white;
+	 		outline-offset: 2px;
+			box-shadow: 0 0 0 2px $black;
+			border-radius: 2px;
+		}
 	}
 
 	&__social{
 
+		&:focus-visible {
+			outline: 2px solid $white;
+	 		outline-offset: 2px;
+			box-shadow: 0 0 0 2px $black;
+			border-radius: 2px;
+		}
 		&-image{
 			width: 30px;
 			height: 30px;

@@ -42,7 +42,8 @@
 		"socials":[
 			{
 				"src":"assets/images/linkedin.png",
-				"alternativeText":"linkedin"
+				"alternativeText":"linkedin",
+				"label":"LinkedIn"
 			}
 		]
 	}

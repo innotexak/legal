@@ -35,7 +35,7 @@
 		flex-direction: column;
 		justify-content: space-between;
 		gap:10px 20px;
-		color:$grey;
+		color:$dark-grey;
 
 		@include media-breakpoint-down(md){
 			background-color: $light-blue-grey;
@@ -105,7 +105,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		gap:20px;
-		color:$grey;
+		color:$dark-grey;
 		box-sizing: border-box;
 
 		&-container{

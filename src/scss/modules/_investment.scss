@@ -76,9 +76,20 @@
 		display: flex;
 		gap: 30px;
 
+		&:focus-visible {
+			outline: 2px solid $gold;
+			outline-offset: 2px;
+			box-shadow: 0 0 0 2px $black;
+		}
+
+		&:focus:not(:focus-visible) {
+            outline: none;
+        }
+
 		@include media-breakpoint-down(sm){
 			width: 100%;
 			overflow-x: auto;
+			padding-top: 4px;
 			padding-bottom:50px;
 			gap: 10px;
 		}
