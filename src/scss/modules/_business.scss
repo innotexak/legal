@@ -188,7 +188,13 @@
 		cursor: pointer;
 		width: fit-content;
 
-	
+		&:focus-visible {
+			outline: 2px solid $white;
+			outline-offset: 2px;
+			box-shadow: 0 0 0 2px $black;
+			border-radius: 2px;
+		}
+
 
 		&-image {
 			width: 36px;
@@ -210,13 +216,6 @@
 		letter-spacing: 0;
 		color: $grey;
 		margin: 0;
-
-		&:focus-visible {
-			outline: 2px solid $white;
-			outline-offset: 2px;
-			box-shadow: 0 0 0 2px $black;
-			border-radius: 2px;
-		}
 
 		span {
 			display: block;

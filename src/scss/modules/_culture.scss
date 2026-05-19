@@ -3,7 +3,7 @@
 .culture {
 	width: 100%;
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: center center;
 	background-size: cover;
 	position:relative;
 
@@ -12,6 +12,12 @@
 		.wrap{
 			padding:0;
 		}
+		// min-height: 550px;
+		background-position: center right;
+	}
+
+	&__subheading {
+		text-align: center;
 	}
 
 	&__tab {
@@ -34,7 +40,15 @@
 		&-item {
 			width: 100%;
 			display: flex;
-			color:inherit
+			color:inherit;
+
+			&:focus-visible {
+				outline: 2px solid $white;
+				outline-offset: 2px;
+				box-shadow: 0 0 0 2px $black;
+				border-radius: 2px;
+			}
+
 
 		}
 
@@ -80,6 +94,7 @@
 
 		&.is-active {
 			display: flex;
+			height: auto;
 		}
 	}
 

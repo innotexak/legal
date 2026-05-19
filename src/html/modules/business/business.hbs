@@ -13,10 +13,10 @@
   	<div class="business__body">
 		<ol class="business__list">
 			{{#each business.items}}
-			<li class="business__item">
+			<li class="business__item" data-animate>
 				<div class="business__item-inner">
 
-					<figure class="business__media">
+					<figure class="business__media" >
 						<img
 							src="{{this.image.src}}"
 							alt="{{this.image.alternativeText}}"
@@ -42,7 +42,7 @@
 		</ol>
 	</div>
 
-    <a class="statement__download" href="{{business.file.url}}" target="_blank" rel="noopener noreferrer">
+    <a class="business__download" href="{{business.file.url}}" target="_blank" rel="noopener noreferrer" data-animate>
         <img
             src="{{business.downloadIcon.src}}"
           	alt=""
@@ -53,7 +53,6 @@
 			<span>
 				<strong>
 					{{business.file.type}}
-				
 				</strong> 
 				{{business.file.size}}
 			</span>

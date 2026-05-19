@@ -27,6 +27,26 @@ const initHelpers = (() => {
 			html.classList.add('loaded');
 		}, 10);
 	});
+
+	window.addEventListener('DOMContentLoaded', () => {
+		const elements = document.querySelectorAll('[data-animate]');
+
+		if (!elements.length) return;
+
+		const observer = new IntersectionObserver(entries => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('in-view');
+					observer.unobserve(entry.target);
+				}
+			});
+		}, { threshold: 0.15 });
+
+		elements.forEach((el, index) => {
+			el.style.setProperty('--animate-index', index);
+			observer.observe(el);
+		});
+	});
 	detectFocusOnKeyPress();
 })();
 

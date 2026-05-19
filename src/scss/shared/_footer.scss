@@ -14,7 +14,7 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: 10px;
-		position: relative;
+
 
 		@include media-breakpoint-down(sm){
 			display: block;
@@ -115,23 +115,39 @@
 	}
 
 	&__up{
-		position: absolute;
+		position: fixed;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		margin-top: 20px;
-		top:-100px;
-		right: 0;
+		bottom:20px;
+		right: 40px;
+		visibility: none;
+		opacity: 0;
+		transition: opacity 0.3s ease, visibility 0.3s ease;
+
+		&.visible {
+			visibility: visible;
+			opacity: 1;
+		}
 
 
 		&-link{
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			width: 40px;
-			height: 40px;
+			width: 60px;
+			height: 60px;
 			border-radius: 50%;
-			background-color: $black;
+			background-color: $dark-grey;
+			box-shadow: 0 0 0 2px $dark-gold;
+			border: none;
+			transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+			&:hover {
+				background-color: $dark-gold;
+				box-shadow: 0 0 0 2px $dark-grey;
+			}
 
 
 			img{
@@ -147,6 +163,16 @@
 				box-shadow: 0 0 0 2px $black;
 				border-radius: 50%;
 			}
+
+			@include media-breakpoint-down(sm){
+				width: 40px;
+				height: 40px;
+			}
+		}
+
+		@include media-breakpoint-down(sm){
+			bottom: 10px;
+			right: 20px;
 		}
 	}
 }

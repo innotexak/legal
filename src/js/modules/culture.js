@@ -46,9 +46,6 @@ const cultureTabs = (() => {
 		// ... (rest of your background image swapping logic stays exactly the same)
 		if (tabId === 'culture') {
 			section.style.backgroundImage = 'url(' + section.dataset.bgImage + ')';
-			section.style.backgroundSize = 'cover';
-			section.style.backgroundPosition = 'center';
-			section.style.backgroundRepeat = 'no-repeat';
 		} else {
 			section.style.backgroundImage = 'none';
 		}

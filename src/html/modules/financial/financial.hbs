@@ -4,7 +4,7 @@
 		<div class="financial__container">
 			<div class="financial__left">
 				<div class="financial__left-top">
-					<h2 class="financial__top-heading" id="financial-heading">
+					<h2 class="financial__top-heading" id="financial-heading" data-animate>
 						{{financial.heading}}
 					</h2>
 
@@ -25,7 +25,7 @@
 
 			<div class="financial__right">
 				{{#each financial.items}}
-					<dl class="financial__right-container">
+					<dl class="financial__right-container" data-animate>
 						<dt class="financial__right-title">{{this.title}}</dt>
 							<dd 
 							class="financial__right-figure"

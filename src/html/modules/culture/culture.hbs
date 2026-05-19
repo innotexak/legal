@@ -36,14 +36,14 @@
       data-content="culture"
       id="panel-culture"
     >
-      <div class="culture__content">
+      <div class="culture__content" data-animate  >
         {{#if data.culture.heading}}
         <h2 class="culture__subheading">{{data.culture.heading}}</h2>
         {{/if}}
       </div>
       {{#if data.culture.image}}
       <div class="culture__media">
-        <img src="{{data.culture.image.src}}" alt="{{data.culture.image.alternativeText}}" class="media-image">
+        <img src="{{data.culture.image.src}}" alt="{{data.culture.image.alternativeText}}" class="media-image" data-animate>
       </div>
       {{/if}}
     </div>
@@ -52,14 +52,14 @@
       {{#if data.clients}}
       <div class="clients__content">
         {{#if data.clients.content}}
-        {{#each data.clients.content}}
-          <div class="clients__content-card" >
-            <img src="{{this.image.src}}" alt="" aria-hidden="true" class="clients__content-quote">
-            <p class="clients__content-text" >{{this.text}}</p>
-            <strong class="clients__content-name">{{this.name}}</strong>
-            <span class="clients__content-position">{{this.position}}</span>
-          </div>
-        {{/each}}
+          {{#each data.clients.content}}
+            <div class="clients__content-card" data-animate >
+              <img src="{{this.image.src}}" alt="" aria-hidden="true" class="clients__content-quote">
+              <p class="clients__content-text" >{{this.text}}</p>
+              <strong class="clients__content-name">{{this.name}}</strong>
+              <span class="clients__content-position">{{this.position}}</span>
+            </div>
+          {{/each}}
         {{/if}}
       </div>
       {{/if}}
@@ -71,21 +71,21 @@
       id="panel-people"
       >
       {{#if data.people.image}}
-      <div class="people__media">
-        <img src="{{data.people.image.src}}" alt="{{data.people.image.alternativeText}}" class="media-image">
-      </div>
+        <div class="people__media">
+          <img src="{{data.people.image.src}}" alt="{{data.people.image.alternativeText}}" class="media-image" data-animate>
+        </div>
       {{/if}}
-      <div class="people__content">
+      <div class="people__content" data-animate>
         {{#if data.people.heading}}
-        <h2 class="people__subheading">{{data.people.heading}}</h2>
-        <p class="people__text">{{data.people.text}}</p>
+          <h2 class="people__subheading">{{data.people.heading}}</h2>
+          <p class="people__text">{{data.people.text}}</p>
         {{/if}}
       </div>
     </div>
 
     {{/if}}
   </div>
-<div class="side-arrow">
+<div class="side-arrow" data-animate>
   <img src="{{data.arrowIcon.src}}" alt="" class="side-arrow__image">
 </div>
 </section>
