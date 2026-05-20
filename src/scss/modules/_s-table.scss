@@ -47,6 +47,7 @@
             flex-direction: column;
             text-align: center;
             overflow: visible;
+            color:$white;
 
             @include media-breakpoint-down(sm) {
                 width: 80px;
@@ -118,7 +119,7 @@
     &__item {
         font-size: 14px;
         font-weight: 400;
-        color: rgba($white, 0.9);
+        color: $white; 
         line-height: 1.4;
 
         @include media-breakpoint-down(md){

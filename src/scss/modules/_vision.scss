@@ -113,6 +113,14 @@
             background-color: rgba($white, 0.15);
             border-color: $white;
         }
+    
+        &:focus-visible {               
+			outline: 2px solid $old-grey;
+			outline-offset: 2px;
+			border-radius: 50%;			
+			box-shadow: 0 0 0 2px $black;		
+		}
+
     }
 
     &__pagination {
@@ -144,6 +152,14 @@
         &:hover {
             background: rgba($white, 0.8);
         }
+
+        &:focus-visible {
+			outline: 2px solid $old-grey;
+			outline-offset: 2px;
+			border-radius: 4px;			
+			box-shadow: 0 0 0 2px $black;		
+		}
+
     }
 }
 

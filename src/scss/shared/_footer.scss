@@ -125,6 +125,7 @@
 		visibility: none;
 		opacity: 0;
 		transition: opacity 0.3s ease, visibility 0.3s ease;
+		z-index: 99;
 
 		&.visible {
 			visibility: visible;
