@@ -9,11 +9,12 @@
 
 	@include media-breakpoint-down(sm) {
 		padding:0 10px;
+		background-position: center right;
+
 		.wrap{
 			padding:0;
 		}
-		// min-height: 550px;
-		background-position: center right;
+		
 	}
 
 	&__subheading {
@@ -41,6 +42,7 @@
 			width: 100%;
 			display: flex;
 			color:inherit;
+			margin:0 10px;
 
 			&:focus-visible {
 				outline: 2px solid $white;
@@ -64,17 +66,28 @@
 			text-decoration: none;
 			color: $color-ink-muted;
 			transition: color 0.2s $ease-in-out;
-			border-bottom: 1px solid rgba($color-line, 0.2);
 			white-space: nowrap;
 			cursor: pointer;
+			border-bottom: 2px solid rgba($color-ink, 0.09);
 
 			&:hover {
-				color: $color-ink;
+				color: $gold;
+				border-color: $gold;
+				transition: color 0.2s $ease-in-out, border-bottom-color 0.2s $ease-in-out;
 			}
 
 			&.is-active {
-				color: $gold
+				color: $gold;
+				border-color: $gold;
 			}
+
+			
+			&:focus-visible {
+				outline: 2px solid $white;
+				outline-offset: 2px;
+				box-shadow: 0 0 0 2px $black;
+				border-radius: 2px;
+			}						
 
 			@include media-breakpoint-down(sm) {
 				padding: 0;

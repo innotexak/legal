@@ -348,5 +348,14 @@
 			display: none;
 			visibility: hidden;
 		}
+
+		.header__top-inner {
+			border-bottom: 2px solid $light-grey
+		}
+
+		.footer__up{
+			display: none;
+			visibility: hidden;
+		}
 	}
 }

@@ -18,7 +18,7 @@
     display: flex;
     align-items: flex-end;
     gap: 20px;
-    padding:0 20px;
+    padding:10px 20px;
 
     @include media-breakpoint-down(sm) {
       overflow-x: auto;
@@ -38,13 +38,20 @@
     border: none;
     cursor: pointer;
     color: $grey;
-    padding: 1rem 0;
+    padding: 13px  5px;
     white-space: nowrap;
     transition: color 0.25s ease;
     font-weight: 500;
     font-size: 30px;
     line-height: 34px;
     letter-spacing: 0;
+
+    &:focus-visible {
+				outline: 2px solid $white;
+				outline-offset: 2px;
+				box-shadow: 0 0 0 2px $black;
+				border-radius: 2px;
+		}						
 
 
     @include media-breakpoint-only(md) {
